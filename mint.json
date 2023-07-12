@@ -46,11 +46,11 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/anarchy_ai_inc",
+    "discord": "https://discord.com/invite/qaFf7S373c",
     "github": "https://github.com/anarchy-ai/llm-vm",
-    "linkedin": "https://www.linkedin.com/company/anarchy-ai",
     "hacker-news": "https://www.ycombinator.com/companies/anarchy",
-    "discord": "https://discord.com/invite/qaFf7S373c"
+    "twitter": "https://twitter.com/anarchy_ai_inc",
+    "linkedin": "https://www.linkedin.com/company/anarchy-ai",
   },
   "backgroundImage": "/background.png"
 }
