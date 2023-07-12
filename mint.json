@@ -49,6 +49,15 @@
       "pages": ["introduction", "quickstart", "local"]
     },
     {
+      "group": "Getting Involved",
+      "pages": [
+        "contributing/getting_involved",
+        "contributing/jobs",
+        "contributing/community_development",
+        "contributing/constitution"
+      ]
+    },
+    {
       "group": "Organization",
       "pages": [
         "organization/organization"
@@ -58,15 +67,6 @@
       "group": "Contact",
       "pages": [
         "contact/contact"
-      ]
-    },
-    {
-      "group": "Getting Involved",
-      "pages": [
-        "contributing/getting_involved",
-        "contributing/jobs",
-        "contributing/community_development",
-        "contributing/constitution"
       ]
     }
   ],
