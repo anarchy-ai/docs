@@ -61,9 +61,12 @@
       ]
     },
     {
-      "group": "Contributing",
+      "group": "Contributing & Jobs",
       "pages": [
-        "contributing/contributing"
+        "contributing/getting_involved",
+        "contributing/jobs",
+        "contributing/community_development",
+        "contributing/constitution"
       ]
     }
   ],
