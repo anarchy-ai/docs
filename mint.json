@@ -47,6 +47,24 @@
     {
       "group": "Get Started",
       "pages": ["introduction", "quickstart", "local"]
+    },
+    {
+      "group": "Organization",
+      "pages": [
+        "organization/organization"
+      ]
+    },
+    {
+      "group": "Contact",
+      "pages": [
+        "contact/contact"
+      ]
+    },
+    {
+      "group": "Contributing",
+      "pages": [
+        "contributing/contributing"
+      ]
     }
   ],
   "footerSocials": {
