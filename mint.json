@@ -27,8 +27,12 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "About Anarchy",
+      "url": "anarchy"
+    },
+    {
+      "name": "About LLM-VM",
+      "url": "llm_vm"
     }
   ],
   "navigation": [
