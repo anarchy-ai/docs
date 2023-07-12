@@ -46,7 +46,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "local"]
+      "pages": ["introduction", "local"]
     },
     {
       "group": "Getting Involved",
