@@ -27,11 +27,7 @@
   },
   "tabs": [
     {
-      "name": "About Anarchy",
-      "url": "anarchy"
-    },
-    {
-      "name": "About LLM-VM",
+      "name": "LLM-VM Documentation",
       "url": "llm_vm"
     }
   ],
