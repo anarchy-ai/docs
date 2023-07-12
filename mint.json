@@ -48,7 +48,8 @@
   "footerSocials": {
     "twitter": "https://twitter.com/anarchy_ai_inc",
     "github": "https://github.com/anarchy-ai/llm-vm",
-    "linkedin": "https://www.linkedin.com/company/anarchy-ai"
+    "linkedin": "https://www.linkedin.com/company/anarchy-ai",
+    "ycombinator": ""
   },
   "backgroundImage": "/background.png"
 }
