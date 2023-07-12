@@ -27,8 +27,16 @@
   },
   "tabs": [
     {
-      "name": "LLM-VM Documentation",
-      "url": "llm_vm"
+      "name": "Documentation",
+      "url": "documentation"
+    }
+    {
+      "name": "Contributing",
+      "url": "contributing"
+    },
+    {
+      "name": "Organization",
+      "url": "organization"
     }
   ],
   "navigation": [
@@ -39,25 +47,12 @@
     {
       "group": "Essentials",
       "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
-      ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/anarchy_ai_inc",
+    "github": "https://github.com/anarchy-ai",
+    "linkedin": "https://www.linkedin.com/company/anarchy-ai"
   },
   "backgroundImage": "/background.png"
 }
