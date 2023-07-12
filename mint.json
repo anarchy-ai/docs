@@ -17,13 +17,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "about",
+      "url": "https://anarchy.ai/"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Hosting Dashboard",
+    "url": "https://chat.dev/"
   },
   "tabs": [
     {
