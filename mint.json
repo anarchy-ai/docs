@@ -17,12 +17,12 @@
   },
   "topbarLinks": [
     {
-      "name": "about",
+      "name": "About",
       "url": "https://anarchy.ai/"
     }
   ],
   "topbarCtaButton": {
-    "name": "Hosting Dashboard",
+    "name": "Try it now",
     "url": "https://chat.dev/"
   },
   "tabs": [
