@@ -17,7 +17,7 @@
   },
   "topbarLinks": [
     {
-      "name": "LLM-VM Github",
+      "name": "Github",
       "url": "https://github.com/anarchy-ai/LLM-VM"
     }
   ],
@@ -26,10 +26,6 @@
     "url": "https://chat.dev/"
   },
   "tabs": [
-    {
-      "name": "LLM-VM Documentation",
-      "url": "documentation"
-    },
     {
       "name": "Getting Involved",
       "url": "contributing"
@@ -42,11 +38,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": ["introduction", "quickstart", "LLM-VM library"]
     }
   ],
   "footerSocials": {
