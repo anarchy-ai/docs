@@ -31,7 +31,7 @@
   },
   "tabs": [
     {
-      "name": "Getting Involved",
+      "name": "Contributing & Jobs",
       "url": "contributing"
     },
     {
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "group": "Contributing & Jobs",
+      "group": "Getting Involved",
       "pages": [
         "contributing/getting_involved",
         "contributing/jobs",
