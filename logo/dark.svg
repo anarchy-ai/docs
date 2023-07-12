@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1280" height="244" viewBox="0 0 1280 244" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1033" height="234" viewBox="0 0 1033 234" xml:space="preserve">
 <desc>Created with Fabric.js 4.4.0</desc>
 <defs>
 </defs>
 
-<g transform="matrix(1 0 0 1 0 -370)" id="background-logo"  >
+<g transform="matrix(1 0 0 1 -120 -372)" id="background-logo"  >
 <g transform="matrix(1 0 0 1 640 512)" id="background-logo"  >
 <rect style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;"  paint-order="stroke"  x="-640" y="-512" rx="0" ry="0" width="1280" height="1024" />
 </g>
