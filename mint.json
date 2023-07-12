@@ -16,7 +16,8 @@
     "dark": "#004E7A"
   },
   "feedback": {
-    "suggestEdit": true
+    "suggestEdit": true,
+    "raiseIssue": true
   },
   "topbarLinks": [
     {
