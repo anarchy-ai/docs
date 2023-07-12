@@ -27,11 +27,11 @@
   },
   "tabs": [
     {
-      "name": "Documentation",
+      "name": "LLM-VM Documentation",
       "url": "documentation"
     }
     {
-      "name": "Contributing",
+      "name": "Getting Involved",
       "url": "contributing"
     },
     {
