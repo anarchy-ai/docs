@@ -33,6 +33,10 @@
     {
       "name": "Organization",
       "url": "organization"
+    },
+    {
+      "name": "Contact",
+      "url": "contact"
     }
   ],
   "navigation": [
