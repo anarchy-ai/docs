@@ -17,8 +17,8 @@
   },
   "topbarLinks": [
     {
-      "name": "About",
-      "url": "https://anarchy.ai/"
+      "name": "LLM-VM Github",
+      "url": "https://github.com/anarchy-ai/LLM-VM"
     }
   ],
   "topbarCtaButton": {
