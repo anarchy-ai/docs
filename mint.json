@@ -3,7 +3,7 @@
   "name": "ANARCHY",
   "modeToggle": {
     "default": "dark",
-    "isHidden": true
+    "isHidden": false
   },
   "logo": {
     "dark": "/logo/dark.svg",
@@ -14,7 +14,7 @@
     "primary": "#12A7D3",
     "light": "#81D7F7",
     "dark": "#004E7A",
-    "background": {"dark":"#000000"}
+    "background": {"dark":"#231333"}
   },
   "feedback": {
     "suggestEdit": true,
