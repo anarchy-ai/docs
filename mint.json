@@ -3,7 +3,7 @@
   "name": "ANARCHY",
   "modeToggle": {
     "default": "dark",
-    "isHidden": true
+    "isHidden": false
   },
   "logo": {
     "dark": "/logo/dark.svg",
