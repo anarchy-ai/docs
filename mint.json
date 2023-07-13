@@ -31,7 +31,7 @@
     "url": "https://chat.dev/"
   },
   "primaryTab": {
-    "name": "Getting Started"
+    "name": "Projects"
   }
   "tabs": [
     {
@@ -49,7 +49,7 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "LLM-VM",
       "pages": ["introduction", "local"]
     },
     {
