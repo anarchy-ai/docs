@@ -30,9 +30,12 @@
     "name": "Try it now",
     "url": "https://chat.dev/"
   },
+  "primaryTab": {
+    "name": "Getting Started"
+  }
   "tabs": [
     {
-      "name": "Contributing & Jobs",
+      "name": "Join Us",
       "url": "contributing"
     },
     {
