@@ -31,8 +31,8 @@
     "url": "https://chat.dev/"
   },
   "primaryTab": {
-    "name": "Projects"
-  }
+    "name": "Getting Started"
+  },
   "tabs": [
     {
       "name": "Contributing & Jobs",
