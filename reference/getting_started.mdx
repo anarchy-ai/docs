@@ -1,0 +1,47 @@
+---
+title: "Getting Started"
+description: "some quick start information"
+---
+
+## 👨‍💻 Installation
+
+To install the LLM-VM you simply need to download this repository and install it with pip like so:
+
+```bash
+> git clone https://github.com/anarchy-ai/LLM-VM.git
+> cd LLM-VM
+> pip3 install .
+```
+
+This will install both the library and test-server.  
+
+### Generating Completions
+Our LLM-VM gets you working directly with popular LLMs locally in just 3 lines. Once you've installed (as above), just load your model and start generating!
+
+
+```python
+# import our client
+from llm_vm.client import Client
+
+# Select which LLM you want to use, here we have openAI's 
+client = Client(big_model = 'chat_gpt')
+
+# Put in your prompt and go!
+response = client.complete(prompt = 'What is Anarchy?', context = '', openai_key = 'ENTER_YOUR_API_KEY')
+print(response)
+# Anarchy is a political ideology that advocates for the absence of government...
+```
+
+### Locally Run an LLM
+```python
+# import our client
+from llm_vm.client import Client
+
+# Select the LlaMA model
+client = Client(big_model = 'llama')
+
+# Put in your prompt and go!
+response = client.complete(prompt = 'What is Anarchy?', context = '')
+print(response)
+# Anarchy is a political philosophy that advocates no government...
+```
