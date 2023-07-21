@@ -49,8 +49,8 @@
   ],
   "navigation": [
     {
-      "group": "LLM-VM",
-	"pages": ["introduction", "quickstart", "agents"]
+	"group": "Getting Started",
+	"pages": ["introduction", "quickstart", "agents", "system"]
     },
     {
       "group": "Getting Involved",
