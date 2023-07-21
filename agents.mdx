@@ -1,0 +1,44 @@
+---
+title: Agents
+description: 'Our AI agents expand what you can do with LLMs!'
+---
+
+## The REBEL Agent
+**REcursion Based Extensible LLM**
+
+Our REBEL agent takes a novel approach to answering complex questions. Est recursive reasoning, REBEL expands what LLMs can do with problem decomposition and tool use. In this way, we are able to answer questions requiring data LLMs were not directly trained on.
+
+### Running REBEL
+**Getting started with REBEL is easy**
+```python quickstart_REBEL.py
+# import our client
+from llm_vm.client import Client
+import os
+
+# Instantiate the client specifying which LLM you want to use
+client = Client(big_model='chat_gpt', small_model='gpt')
+
+# Put in your prompt and go!
+response = client.complete(
+	 prompt = 'Is it warmer in Paris or Timbuktu and what are the temperatures in either city?',
+         context='',
+         openai_key=os.getenv("OPENAI_API_KEY"), #for REBEL we need an OpenAI key
+         tools=[{'description': 'Find the weather at a location and returns it in celcius.',
+                 'dynamic_params': {
+		 		   "latitude": 'latitude of as a float',
+		 		   "longitude": 'the longitude as a float'
+				   },
+                 'method': 'GET',
+                 'url': "https://api.open-meteo.com/v1/forecast",
+                 'static_params': {'current_weather': 'true'}}]) #No tools by default, so you have to add your own
+print(response)
+```
+
+
+<Card
+    title="Visit our Github Repo"
+    icon="pen-to-square"
+    href="https://github.com/anarchy-ai/llm-vm/tree/main/src/llm_vm/agents"
+    >
+    Interested in learning more? Come see the code!
+</Card>

@@ -50,7 +50,7 @@
   "navigation": [
     {
       "group": "LLM-VM",
-      "pages": ["introduction", "local"]
+	"pages": ["introduction", "quickstart", "agents"]
     },
     {
       "group": "Getting Involved",
