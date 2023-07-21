@@ -1,86 +1,88 @@
 ---
-title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+title: Quickstart
+description: 'Anarchy is open-core, meaning you can download it to run your own models locally!'
 ---
 
-## Setup your development
+## Installation
+**Use git and pip to quickly install the LLM-VM**
 
-Learn how to update your docs locally and and deploy them to the public.
+Navigate to your desired directory and run the following
 
-### Edit and preview
+```bash installing anarchy
+> git clone https://github.com/anarchy-ai/LLM-VM.git
+> cd LLM-VM
+> pip3 install .
+```
+This will install both the library and test-sever
 
-<AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
-    During the onboarding process, we created a repository on your Github with
-    your docs content. You can find this repository on our
-    [dashboard](https://dashboard.mintlify.com). To clone the repository
-    locally, follow these
-    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    in your terminal.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
-    Previewing helps you make sure your changes look as intended. We built a
-    command line interface to render these changes locally. 1. Install the
-    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
-    documentation changes locally with this command: ``` npm i -g mintlify ```
-    2. Run the following command at the root of your documentation (where
-    `mint.json` is): ``` mintlify dev ```
-  </Accordion>
-</AccordionGroup>
 
-### Deploy your changes
+## Generating Competions
+** Generate from prompts in 3 lines **
 
-<AccordionGroup>
+```python quickstart.py
+# import our client
+from llm_vm.client import Client
 
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
-</Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
-  Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
-</Accordion>
+# Select which LLM you want to use, here we have openAI's 
+client = Client(big_model = 'chat_gpt')
 
-</AccordionGroup>
+# Put in your prompt and go!
+response = client.complete(prompt = 'What is Anarchy?', context = '', openai_key = 'ENTER_YOUR_API_KEY')
+print(response)
+# Anarchy is a political ideology that advocates for the absence of government...
+```
+Our Client allows you to interact with OpenAI's completion endpoint seemlessly.
 
-## Update your docs
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
+## Locally Run an LLM
+**Choose a popular LLM and use it as easily as chat-gpt**
+```python quickstart.py
+# import our client
+from llm_vm.client import Client
+import os
 
-<CardGroup>
+# Instantiate the client specifying which LLM you want to use
 
-<Card title="Style Your Docs" icon="paintbrush" href="/settings/global">
-  Add flair to your docs with personalized branding.
-</Card>
+client = Client(big_model='pythia')
+
+# Put in your prompt and go!
+response = client.complete(prompt = 'What is anarchy?',
+                           context='')
+print(response)
+# Anarchy is a political system in which the state is abolished and the people are free...
+```
+
+## Supported Models
+** Easily select from a selection of popular LLMs **
+```python Supported Models
+Supported_Models = ['chat_gpt','gpt','neo','llama','bloom','opt','pythia']
+```
+
+## Picking a Different Model
+**Need a bigger or smaller version of a supported model?**
+
+With LLM-VM this is no problem!
+```python quickstart.py
+# import our client
+from llm_vm.client import Client
+
+# After selecting the supported model, specify a hugging face endpoint.
+client = Client(big_model = 'neo',
+       	 	big_model_config={'model_uri':'EleutherAI/gpt-neox-20b'}, 
+                small_model ='neo',
+		small_model_config={'model_uri':'EleutherAI/gpt-neox-125m'})
+
+# Put in your prompt and go!
+response = client.complete(prompt = 'What is Anarchy?', context = '')
+print(response)
+# Anarchy is a political philosophy that advocates no government...
+```
+
 
 <Card
-  title="Add API Endpoints"
-  icon="square-code"
-  href="/api-playground/configuration"
->
-  Implement your OpenAPI spec and enable API user interaction.
+    title="Visit our Github Repo"
+    icon="pen-to-square"
+    href="https://github.com/anarchy-ai/llm-vm"
+    >
+    Interested in learning more? Come see the code!
 </Card>
-
-<Card
-  title="Integrate Analytics"
-  icon="chart-mixed"
-  href="/analytics/supported-integrations"
->
-  Draw insights from user interactions with your documentation.
-</Card>
-
-<Card
-  title="Host on a Custom Domain"
-  icon="browser"
-  href="/settings/custom-domain/subdomain"
->
-  Keep your docs on your own website's subdomain.
-</Card>
-
-</CardGroup>
