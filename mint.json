@@ -49,8 +49,16 @@
   ],
   "navigation": [
     {
+	"group": "AnarchyAI",
+	"pages": ["introduction"]
+    },
+    {
 	"group": "Getting Started",
-	"pages": ["introduction", "quickstart", "agents", "system"]
+	"pages": ["install", "quickstart", "agents", "server"]
+    },
+    {
+	"group": "Check These",
+	"pages": ["system"]
     },
     {
       "group": "Getting Involved",

@@ -1,33 +1,22 @@
 ---
 title: Quickstart
-description: 'Anarchy is open-core, meaning you can download it to run your own models locally!'
+description: 'Our LLM-VM lets get going at your speed with the completion endpoint'
 ---
 
-## Installation
-**Use git and pip to quickly install the LLM-VM**
-
-Navigate to your desired directory and run the following
-
-```bash installing anarchy
-> git clone https://github.com/anarchy-ai/LLM-VM.git
-> cd LLM-VM
-> pip3 install .
-```
-This will install both the library and test-sever
-
-
 ## Generating Completions
-** Generate from prompts in 3 lines **
+**Generate from prompts in 3 lines**
 
-```python quickstart.py
+```python
 # import our client
 from llm_vm.client import Client
 
 # Select which LLM you want to use, here we have openAI's 
-client = Client(big_model = 'chat_gpt')
+client=Client(big_model='chat_gpt')
 
 # Put in your prompt and go!
-response = client.complete(prompt = 'What is Anarchy?', context = '', openai_key = 'ENTER_YOUR_API_KEY')
+response=client.complete(prompt='What is Anarchy?',
+		     	 context='',
+			 openai_key='ENTER_YOUR_API_KEY')
 print(response)
 # Anarchy is a political ideology that advocates for the absence of government...
 ```
@@ -36,48 +25,98 @@ Our Client allows you to interact with OpenAI's completion endpoint seemlessly.
 
 ## Locally Run an LLM
 **Choose a popular LLM and use it as easily as chat-gpt**
-```python quickstart.py
+```python
 # import our client
 from llm_vm.client import Client
 import os
 
 # Instantiate the client specifying which LLM you want to use
 
-client = Client(big_model='pythia')
+client=Client(big_model='pythia')
 
 # Put in your prompt and go!
-response = client.complete(prompt = 'What is anarchy?',
-                           context='')
+response=client.complete(prompt='What is anarchy?',
+                         context='')
 print(response)
 # Anarchy is a political system in which the state is abolished and the people are free...
 ```
 
 ## Supported Models
-** Easily select from a selection of popular LLMs **
-```python Supported Models
-Supported_Models = ['chat_gpt','gpt','neo','llama','bloom','opt','pythia']
+**Easily select from a selection of popular LLMs**
+
+Be sure to check our [System Requirements](system) to make sure you can use your desired model.
+```python
+Supported_Models=[ # Use these strings to call the model
+		  'chat_gpt', 'gpt', 'neo', 'llama',
+		  'bloom', 'opt', 'pythia']
 ```
 
 ## Picking a Different Model
 **Need a bigger or smaller version of a supported model?**
 
 With LLM-VM this is no problem!
-```python quickstart.py
+
+```python
 # import our client
 from llm_vm.client import Client
 
 # After selecting the supported model, specify a hugging face endpoint.
-client = Client(big_model = 'neo',
-       	 	big_model_config={'model_uri':'EleutherAI/gpt-neox-20b'}, 
-                small_model ='neo',
-		small_model_config={'model_uri':'EleutherAI/gpt-neox-125m'})
+client=Client(big_model='neo',
+       	      big_model_config={'model_uri':'EleutherAI/gpt-neox-20b'}, 
+              small_model='neo',
+	      small_model_config={'model_uri':'EleutherAI/gpt-neox-125m'})
 
 # Put in your prompt and go!
-response = client.complete(prompt = 'What is Anarchy?', context = '')
+response=client.complete(prompt='What is Anarchy?', context='')
 print(response)
 # Anarchy is a political philosophy that advocates no government...
 ```
 
+## Finetuning
+### Finetuning an LLM
+**Finetune intelligently with LLM-VM**
+
+Our strategy pairs a small LLM with a larger LLM in a student/teacher relationship.
+
+By carefully designing your prompt and context, you can use our data synthesis technique to quickly scale data sets giving you the training data you need.
+```python
+# import our client
+from llm_vm.client import Client
+import os
+from llm_vm.config import settings
+# Instantiate the client specifying which LLM you want to use
+client=Client(big_model='chat_gpt', small_model='pythia')
+
+# Put in your prompt and go!
+response=client.complete(prompt="Answer question Q. ",
+			 context="Q: What is the currency in myanmmar",
+			 openai_key=settings.openai_api_key,
+			 temperature=0.0,
+			 data_synthesis=True,
+			 finetune=True,)
+```
+
+### Loading a finetuned LLM from disk
+**Quickly test and deploy your finetuned models with LLM-VM**
+
+Just specify the parent model, your finetuned filename, and you're almost there!
+```python
+# import our client
+from llm_vm.client import Client
+import os
+
+# Instantiate the client specifying which LLM you want to use
+client=Client(big_model='pythia')
+
+# specify the file name of the finetuned model to load
+model_name='<filename_of_your_model>.pt'
+client.load_finetune(model_name)
+
+# Put in your prompt and go!
+response=client.complete(prompt='What is anarchy?',
+                         context='')
+print(response)
+```
 
 <Card
     title="Visit our Github Repo"
