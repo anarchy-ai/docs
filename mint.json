@@ -55,7 +55,11 @@
     },
     {
 	"group": "Getting Started",
-	"pages": ["install", "quickstart", "agents", "server"]
+	"pages": [
+	    "install",
+	    "quickstart",
+	    "agents",
+	    "server"]
     },
     {
 	"group": "Check These",
