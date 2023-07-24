@@ -31,26 +31,27 @@
     "url": "https://chat.dev/"
   },
   "primaryTab": {
-    "name": "Getting Started"
+    "name": "Home"
   },
-  "tabs": [
-    {
-      "name": "Contributing & Jobs",
-      "url": "contributing"
+  "anchors": [    
+
+    {	  
+      "name": "Discord",
+      "icon": "discord",
+      "color": "#2564eb",
+      "url": "https://discord.gg/wWuNGZAXZF"
     },
     {
-      "name": "Organization",
-      "url": "organization"
-    },
-    {
-      "name": "Contact",
-      "url": "contact"
+      "name": "Blog-todo-",
+      "icon": "comments",
+      "color": "#f59f0b",
+      "url": "install"
     }
   ],
   "navigation": [
     {
-	"group": "Anarchy",
-	"pages": ["introduction"]
+	"group": "Welcome",
+	"pages": [ "welcome/why_anarchy","welcome/llm_vm","welcome/roadmap"]
     },
     {
 	"group": "Getting Started",
