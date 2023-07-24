@@ -54,16 +54,13 @@
 	"pages": [ "welcome/why_anarchy","welcome/llm_vm","welcome/roadmap"]
     },
     {
-	"group": "Getting Started",
+	"group": "Get Started",
 	"pages": [
-	    "install",
-	    "quickstart",
-	    "agents",
-	    "server"]
-    },
-    {
-	"group": "Check These",
-	"pages": ["system"]
+	    "get_started/system",
+	    "get_started/install",
+	    "get_started/quickstart",
+	    "get_started/agents",
+	    "get_started/server"]
     },
     {
       "group": "Getting Involved",
