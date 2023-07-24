@@ -1,0 +1,21 @@
+---
+title: 'What is an LLM-VM?'
+description: 'The Large Language Model Virtual Machine(LLM-VM) is a optimized backend for managing LLMs. It serves to facilitate communication and coordination between data, language models(running on the CPU) prompts and various tools to streamline AGI development'
+---
+
+## Features of the LLM-VM
+- **Implicit Agents** - The Anarchy LLM-VM can be set up to use external tools through our agents such as [REBEL](../get_started/agents) just by supplying tool descriptions!
+
+- **Inference Optimization** - The Anarchy LLM-VM is optimized from agent level all the way to assembly on known LLM architectures to get the most bang for your buck. With state of the art batching, sparse inference and quantization, distillation, and multi-level colocation, we aim to provide the fastest framework available.
+
+- **Task Auto-Optimization** - The Anarchy LLM-VM will analyze your use cases for repetative tasks where it can activate student-teacher distillation to train a super-efficient small model from a larger more general model without loosing accuracy. It can furthermore take advantage of data-synthesis techniques to improve results.
+
+- **Library Callable** - We provide a library that can be used from any python codebase directly.
+
+- **HTTP Endpoints** - We provide an HTTP standalone server to handle completion requests.
+
+## Goals
+The LLM-VM wants to centralize and optimize the functionalities of modern completion endpoints in an opinionated way, allowing for the fficient batching of calls that might otherwise be extremely costly across multiple endpoints
+
+We want to make the LLM-VM model and architecture agnostic. We want to create a backend that gives you an optimized solution regardless of which model you choose, and which architecture and hardware solution you choose to run it on
+

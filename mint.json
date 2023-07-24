@@ -11,10 +11,10 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#12A7D3",
-    "light": "#81D7F7",
+    "primary": "#92d143",
+    "light": "#5ce0e6",
     "dark": "#004E7A",
-    "background": {"dark":"#180828", "light" : "#fefdff"}
+    "background": {"dark":"#0f1117", "light" : "#fefdff"}
   },
   "feedback": {
     "suggestEdit": true,
@@ -31,34 +31,36 @@
     "url": "https://chat.dev/"
   },
   "primaryTab": {
-    "name": "Getting Started"
+    "name": "Home"
   },
-  "tabs": [
-    {
-      "name": "Contributing & Jobs",
-      "url": "contributing"
+  "anchors": [    
+
+    {	  
+      "name": "Discord",
+      "icon": "discord",
+      "color": "#2564eb",
+      "url": "https://discord.gg/wWuNGZAXZF"
     },
     {
-      "name": "Organization",
-      "url": "organization"
-    },
-    {
-      "name": "Contact",
-      "url": "contact"
+      "name": "Blog-todo-",
+      "icon": "comments",
+      "color": "#f59f0b",
+      "url": "install"
     }
   ],
   "navigation": [
     {
-	"group": "Anarchy",
-	"pages": ["introduction"]
+	"group": "Welcome",
+	"pages": [ "welcome/why_anarchy","welcome/llm_vm","welcome/roadmap"]
     },
     {
-	"group": "Getting Started",
-	"pages": ["install", "quickstart", "agents", "server"]
-    },
-    {
-	"group": "Check These",
-	"pages": ["system"]
+	"group": "Get Started",
+	"pages": [
+	    "get_started/system",
+	    "get_started/install",
+	    "get_started/quickstart",
+	    "get_started/agents",
+	    "get_started/server"]
     },
     {
       "group": "Getting Involved",
