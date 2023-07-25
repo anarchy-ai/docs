@@ -1,0 +1,32 @@
+---
+title: Local Server
+description: 'Here you can find instructions on setting up our HTTP endpoint for completions'
+---
+
+## LLM-VM Server
+### Get up and running
+
+All the functionality described in previous sections can be accessed almost entirely through an API call. First start ther server with the following command.
+
+```bash
+> llm_vm_server
+```
+This will spin up the flask server with settings specifed in your ```settings.toml``` file!
+
+### Specifying your models
+**Save your development environment in a ```setting.toml``` file**
+```toml
+# Default settings for your application
+BIG_MODEL = "chat_gpt"
+PORT = 3002
+SMALL_MODEL = "bloom"
+HOST = "127.0.0.1"
+```
+The server pulls from this file to determine which LLMs will be used, allowing for reliable behavior every server launch.
+<Card
+    title="Visit our Github Repo"
+    icon="pen-to-square"
+    href="https://github.com/anarchy-ai/llm-vm"
+    >
+    Interested in learning more? Come see the code!
+</Card>

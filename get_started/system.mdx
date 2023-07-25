@@ -1,36 +1,55 @@
 ---
 title: System Requirements
-description: 'The requirements for running this software depends on which LLM model you use, be sure to have enough RAM to run these models!'
+description: 'LLM-VM uses [Python](https://www.python.org/downloads/) and is compatible with version 3.8 and higher.'
 ---
 
-### Python
-**LLM-VM requires the following dependencies**
+### Dependencies Used
+LLM-VM makes use of the following Python dependencies and versions.
 
+<Accordion title="Python Packages">
+|Package|Minimum Version|
+|-|-|
+|[dynaconf](https://pypi.org/project/dynaconf/)					|[3.2.0](https://pypi.org/project/dynaconf/3.2.0)|
+|[openai](https://pypi.org/project/openai/)					|[0.27.6](https://pypi.org/project/openai/0.27.6)|	
+|[numpy](https://pypi.org/project/numpy/)					|[1.22.4](https://pypi.org/project/numpy/1.22.4)|
+|[watchdog](https://pypi.org/project/watchdog/)					|[3.0.0](https://pypi.org/project/watchdog/3.0.0)|
+|[xdg](https://pypi.org/project/xdg/)						|[6.0.0](https://pypi.org/project/xdg/6.0.0)|
+|[accelerate](https://pypi.org/project/accelerate/)				|[0.21.0](https://pypi.org/project/accelerate/0.21.0)|
+|[transformers](https://pypi.org/project/transformers/)				|[4.29.0](https://pypi.org/project/transformers/4.29.0)|
+|[flask](https://pypi.org/project/flask/)					|[2.3.2](https://pypi.org/project/flask/2.3.2)|
+|[llama-index](https://pypi.org/project/llama-index/) 				|[0.7.7](https://pypi.org/project/llama-index/0.7.7/)|
+|[python-Levenshtein](https://pypi.org/project/python-Levenshtein/)		|[0.21.1](https://pypi.org/project/python-Levenshtein/0.21.1/)|
+|[beautifulsoup4](https://pypi.org/project/beautifulsoup4/)			|[4.12.2](https://pypi.org/project/beautifulsoup4/4.12.2)|
+|[sentencepiece](https://pypi.org/project/sentencepiece/)			|[0.1.99](https://pypi.org/project/sentencepiece/0.1.99)|
+|[sentence-transformers](https://pypi.org/project/sentence-transformers/)	|[2.2.2](https://pypi.org/project/sentence-transformers/2.2.2)|
+|[requests](https://pypi.org/project/requests/) 				|[2.26.0](https://pypi.org/project/requests/2.26.0)|
+|[spacy](https://pypi.org/project/spacy/)					|[3.5.3](https://pypi.org/project/spacy/3.5.3)|
+
+</Accordion>
 These can be installed automatically from the LLM-VM folder with
 ```bash
 > pip install .
 ```
-<Accordion title="Python Packages">
-|Package|Minimum Version|
-|-|-|
-|dynaconf|3.2.0|
-|openai|0.27.6|	
-|numpy|1.22.4|
-|watchdog|3.0.0|
-|xdg|6.0.0|
-|accelerate|0.21.0|
-|transformers|4.29.0|
-|flask|2.3.2|
-|llama-index|0.7.7|
-|python-Levenshtein|0.21.1|
-|bs4|0.0.1|
-|sentencepiece|0.1.99|
-|sentence-transformers|2.2.2|
-|requests|2.26.0|
-|spacy|3.5.3|
+### Supported Models
+Which model you choose to use will be the biggest impact on your system's requirements.
+
+<Accordion title="Supported Models (and sizes)">
+|LLM-VM setting|Developer|LLM model|Model Size|
+|-|-|-|-|
+|```'chat_gpt'```|[OpenAI](https://platform.openai.com/)			 | [gpt-3.5-turbo-0301](https://platform.openai.com/docs/models/gpt-3-5)     |N/A|
+|```'gpt'```     |[OpenAI](https://platform.openai.com/)			 | [text-davinci-003](https://platform.openai.com/docs/models/gpt-3)         |N/A|
+|```'bloom'```   |[BigScience](https://huggingface.co/bigscience)         | [bloom-560](https://huggingface.co/bigscience/bloom-560m)                 |1.12 GB|
+|```'flan'```    |[Google](https://huggingface.co/google)	                 | [flan-t5-small](https://huggingface.co/google/flan-t5-small)              |308 MB|
+|```'llama'```   |[Openlm-Research](https://huggingface.co/openlm-research)| [open_llama_3b](https://huggingface.co/openlm-research/open_llama_3b)     |6.85 GB|
+|```'neo'```     |[ElutherAI](https://huggingface.co/EleutherAI)      	 | [gpt-neo-1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B)	     |5.31 GB|
+|```'opt'```     |[Facebook](https://huggingface.co/facebook)       	 | [opt-350m](https://huggingface.co/facebook/opt-350m)                      |662 MB|
+|```'pythia'```  |[ElutherAI](https://huggingface.co/EleutherAI)      	 | [pythia-70m-deduped](https://huggingface.co/EleutherAI/pythia-70m-deduped)|166 MB|
+
+Just replace ```'chat_gpt'``` in the example with your desired model and you're all set.
 
 </Accordion>
-### Supported Models
+
+We recommend making sure you have enough RAM to load the models. 
 <AccordionGroup>
 
 <Accordion title="Neo Models">
