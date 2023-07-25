@@ -37,7 +37,6 @@ print(response)
 Tools are defined by dictionaries in that are added to the tool list. These dictionaries need to contain the following fields:
 
 **description**: the description of what the tool does
-**dynamic_params**: a dictionary that contains key value pairs {parameter:description} of mutable parameters to the API endpoint that need to be set by REBEL to answer a query
 
 
 As many tools as desired can be added to the tool list, and REBEL will attempt to compositionally answer a question that may require calling multiple tools. 
