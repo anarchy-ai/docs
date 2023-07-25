@@ -65,12 +65,12 @@
 	]
     },
     {
-	"group": "Quickstart",
+	"group": "💨 Quickstart 💨",
 	"pages": [
 	    "get_started/system",
 	    "get_started/install",
 	    {
-		"group":"Running LLM-VM",
+		"group":"Running LLM-VM 👟",
 		"pages":[
 		    "get_started/quickstart/completions",
 		    "get_started/quickstart/finetuning",
