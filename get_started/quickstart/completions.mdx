@@ -45,28 +45,12 @@ print(response)
 <Warning>Using OpenAI's models require an OpenAI API Key and may result in costs not associated with Anarchy's LLM-VM</Warning>
 
 ## Supported Models
-You can see a list of all models you can use below.
+We support several open LLM model families. You can see which ones and the default models used below.
 
 <Accordion title="Supported Models (and sizes)">
-|```big_model```|Developer|LLM model|Model Size|
-|-|-|-|-|
-|```'chat_gpt'```|[OpenAI](https://platform.openai.com/)			 | [gpt-3.5-turbo-0301](https://platform.openai.com/docs/models/gpt-3-5)     |n/a|
-|```'gpt'```     |[OpenAI](https://platform.openai.com/)			 | [text-davinci-003](https://platform.openai.com/docs/models/gpt-3)         |n/a|
-|```'bloom'```   |[BigScience](https://huggingface.co/bigscience)         | [bloom-560](https://huggingface.co/bigscience/bloom-560m)                 |1.12 GB|
-|```'flan'```    |[Google](https://huggingface.co/google)	                 | [flan-t5-small](https://huggingface.co/google/flan-t5-small)              |308 MB|
-|```'llama'```   |[Openlm-Research](https://huggingface.co/openlm-research)| [open_llama_3b](https://huggingface.co/openlm-research/open_llama_3b)     |6.85 GB|
-|```'neo'```     |[ElutherAI](https://huggingface.co/EleutherAI)      	 | [gpt-neo-1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B)	     |5.31 GB|
-|```'opt'```     |[Facebook](https://huggingface.co/facebook)       	 | [opt-350m](https://huggingface.co/facebook/opt-350m)                      |662 MB|
-|```'pythia'```  |[ElutherAI](https://huggingface.co/EleutherAI)      	 | [pythia-70m-deduped](https://huggingface.co/EleutherAI/pythia-70m-deduped)|166 MB|
-
+<Snippet file="default_models_table.mdx" />
 Just replace ```'chat_gpt'``` in the example with your desired model and you're all set.
-
 </Accordion>
+For more information on selecting models visit our [Local LLMs](local_llms) section.
 
-<Card
-    title="Visit our Github Repo"
-    icon="pen-to-square"
-    href="https://github.com/anarchy-ai/llm-vm"
-    >
-    Interested in learning more? Come see the code!
-</Card> 
+<Snippet file="github.mdx" />
