@@ -1,0 +1,33 @@
+---
+title: Local LLMs
+description: 'Here we explain how to choose non-default LLMs for use in the LLM-VM'
+---
+
+The LLM-VM default model sizes for local models is intended to make experimentation with LLMs accessible to everyone, but if you have the memory required, larger parameter models will perform far better!
+
+Here is an example if you want to use a large and small neo model for your teacher and student, and you have enough ram:
+```python Loading Non-default models
+# import our client
+from llm_vm.client import Client
+
+# Select the LlaMA model
+client = Client(
+       big_model = 'neo',
+       big_model_config={'model_uri':'EleutherAI/gpt-neox-20b'}, 
+       small_model ='neo',
+       small_model_config={'model_uri':'EleutherAI/gpt-neo-125m'})
+
+# Put in your prompt and go!
+response = client.complete(prompt = 'What is Anarchy?', context = '')
+print(response)
+# Anarchy is a political philosophy that advocates no government...
+```
+Now, keep in mind the [gpt-neox-20b](https://huggingface.co/EleutherAI/gpt-neox-20b) is almost 42 GB in size, and would require at least as much RAM to use, in addition to the [gpt-neo-125m](https://huggingface.co/EleutherAI/gpt-neo-125m) which is another ~ 0.5 GB.
+
+<Card
+    title="Visit our Github Repo"
+    icon="pen-to-square"
+    href="https://github.com/anarchy-ai/llm-vm"
+    >
+    Interested in learning more? Come see the code!
+</Card>

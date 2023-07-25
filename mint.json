@@ -58,9 +58,17 @@
 	"pages": [
 	    "get_started/system",
 	    "get_started/install",
-	    "get_started/quickstart",
-	    "get_started/agents",
-	    "get_started/server"]
+	    {
+		"group":"Quickstart",
+		"pages":[
+		    "get_started/quickstart/completions",
+		    "get_started/quickstart/finetuning",
+		    "get_started/quickstart/agents",
+		    "get_started/quickstart/local_llms",
+		    "get_started/quickstart/server"
+		]
+	    }
+	    ]
     },
     {
       "group": "Getting Involved",
