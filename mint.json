@@ -56,7 +56,7 @@
   ],
   "navigation": [
     {
-	"group": "👋 Welcome 👋",
+	"group": "Welcome",
 	"pages": [
 	    "welcome/why_anarchy",
 	    "welcome/llm_vm",
@@ -65,7 +65,7 @@
 	]
     },
     {
-	"group": "💨 Quickstart 💨",
+	"group": "Quickstart",
 	"pages": [
 	    "get_started/system",
 	    "get_started/install",
@@ -82,7 +82,7 @@
 	    ]
     },
       {
-      "group": "💪 Getting Involved 💪",
+      "group": "Getting Involved",
       "pages": [
         "contributing/getting_involved",
         "contributing/jobs",
