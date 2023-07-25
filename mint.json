@@ -70,7 +70,7 @@
 	    "get_started/system",
 	    "get_started/install",
 	    {
-		"group":"Running LLM-VM 👟",
+		"group":"👟 Running LLM-VM",
 		"pages":[
 		    "get_started/quickstart/completions",
 		    "get_started/quickstart/finetuning",
@@ -82,7 +82,7 @@
 	    ]
     },
       {
-      "group": "Getting Involved",
+      "group": "💪 Getting Involved 💪",
       "pages": [
         "contributing/getting_involved",
         "contributing/jobs",
