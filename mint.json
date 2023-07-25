@@ -33,6 +33,10 @@
   "primaryTab": {
     "name": "Home"
   },
+  "topAnchor": {
+    "name": "Documentation",
+    "icon": "graduation-cap"
+  },  
   "anchors": [    
 
     {	  
@@ -42,7 +46,7 @@
       "url": "https://discord.gg/wWuNGZAXZF"
     },
     {	  
-      "name": "Our Calendly (talk to us!)",
+      "name": "Book Us! (Sales & Support)",
       "icon": "calendar-days",
       "color": "#006bff",
       "url": "https://calendly.com/anarchy-ai/customer-call"
@@ -51,15 +55,17 @@
       "name": "Y Combinator",
       "icon": "y-combinator",
       "color": "#fb6518",
-      "url": "https://www.ycombinator.com/companies/anarchy"
+      "url": "https://www.ycombinator.com/companies/anarchy",
+      "iconType":"brands"
     }
   ],
   "navigation": [
     {
-	"group": "👋 Welcome 👋",
+	"group": "👋 Welcome",
 	"pages": [
 	    "welcome/why_anarchy",
 	    "welcome/who_are_we",
+	    "welcome/mission",
 	    "welcome/contact"
 	]
     },
@@ -68,12 +74,12 @@
 	"pages":[
 	    "welcome/llm_vm",
 	    {
-		"group": "Quickstart",
+		"group": "🏄 Quickstart",
 		"pages": [
 		    "get_started/system",
 		    "get_started/install",
 		    {
-			"group":"Running LLM-VM",
+			"group":"🏃 Running LLM-VM",
 			"pages":[
 			    "get_started/quickstart/completions",
 			    "get_started/quickstart/finetuning",
