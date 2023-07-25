@@ -65,12 +65,12 @@
 	]
     },
     {
-	"group": "Get Started",
+	"group": "Quickstart",
 	"pages": [
 	    "get_started/system",
 	    "get_started/install",
 	    {
-		"group":"Quickstart",
+		"group":"Running LLM-VM",
 		"pages":[
 		    "get_started/quickstart/completions",
 		    "get_started/quickstart/finetuning",
@@ -81,7 +81,7 @@
 	    }
 	    ]
     },
-    {
+      {
       "group": "Getting Involved",
       "pages": [
         "contributing/getting_involved",
