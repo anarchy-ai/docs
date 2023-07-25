@@ -14,7 +14,7 @@
     "primary": "#92d143",
     "light": "#5ce0e6",
     "dark": "#004E7A",
-    "background": {"dark":"#0f1117", "light" : "#fefdff"}
+    "background": {"dark":"#100127", "light" : "#fefdff"}
   },
   "feedback": {
     "suggestEdit": true,
@@ -33,10 +33,6 @@
   "primaryTab": {
     "name": "Home"
   },
-  "topAnchor": {
-    "name": "Documentation",
-    "icon": "graduation-cap"
-  },
   "anchors": [    
 
     {	  
@@ -46,7 +42,7 @@
       "url": "https://discord.gg/wWuNGZAXZF"
     },
     {	  
-      "name": "Book Us! (Sales & Support)",
+      "name": "Our Calendly (talk to us!)",
       "icon": "calendar-days",
       "color": "#006bff",
       "url": "https://calendly.com/anarchy-ai/customer-call"
@@ -55,39 +51,43 @@
       "name": "Y Combinator",
       "icon": "y-combinator",
       "color": "#fb6518",
-      "url": "https://www.ycombinator.com/companies/anarchy",
-      "iconType":"brands"
+      "url": "https://www.ycombinator.com/companies/anarchy"
     }
   ],
   "navigation": [
     {
-	"group": "Welcome",
+	"group": "👋 Welcome 👋",
 	"pages": [
 	    "welcome/why_anarchy",
-	    "welcome/mission",
-	    "welcome/llm_vm",
-	    "welcome/roadmap",
+	    "welcome/who_are_we",
 	    "welcome/contact"
 	]
     },
     {
-	"group": "Quickstart",
-	"pages": [
-	    "get_started/system",
-	    "get_started/install",
+	"group": "LLM VM",
+	"pages":[
+	    "welcome/llm_vm",
 	    {
-		"group":"👟 Running LLM-VM",
-		"pages":[
-		    "get_started/quickstart/completions",
-		    "get_started/quickstart/finetuning",
-		    "get_started/quickstart/agents",
-		    "get_started/quickstart/local_llms",
-		    "get_started/quickstart/server"
+		"group": "Quickstart",
+		"pages": [
+		    "get_started/system",
+		    "get_started/install",
+		    {
+			"group":"Running LLM-VM",
+			"pages":[
+			    "get_started/quickstart/completions",
+			    "get_started/quickstart/finetuning",
+			    "get_started/quickstart/agents",
+			    "get_started/quickstart/local_llms",
+			    "get_started/quickstart/server"
+			]
+		    }
 		]
-	    }
-	    ]
+	    },
+	    "welcome/roadmap"
+	]
     },
-      {
+     {
       "group": "Getting Involved",
       "pages": [
         "contributing/getting_involved",
