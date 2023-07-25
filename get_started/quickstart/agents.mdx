@@ -16,14 +16,14 @@ from llm_vm.client import Client
 import os
 
 # Instantiate the client specifying which LLM you want to use
-client = Client(big_model='chat_gpt', small_model='gpt')
+client = Client(big_model='chat_gpt', small_model='gpt') #REBEL will use chat_gpt no matter what big model is specified here, this specification exists for non-REBEL completion calls. 
 
-# Put in your prompt and go!
+#Calling client.complete with a tool list specified leads to the REBEL agent being used.
 response = client.complete(
 	 prompt = 'Is it warmer in Paris or Timbuktu and what are the temperatures in either city?',
          context='',
          openai_key=os.getenv("OPENAI_API_KEY"), #for REBEL we need an OpenAI key
-         tools=[{'description': 'Find the weather at a location and returns it in celcius.',
+         tools=[{'description': 'Find the weather at a location and returns it in celcius.',  #this tool list contains only one dictionary, therefore only one tool
                  'dynamic_params': {
 		 		   "latitude": 'latitude of as a float',
 		 		   "longitude": 'the longitude as a float'
@@ -34,6 +34,13 @@ response = client.complete(
 print(response)
 ```
 
-**We need information on how to do use and design "tools"**
+Tools are defined by dictionaries in that are added to the tool list. These dictionaries need to contain the following fields:
 
+description: the description of what the tool does
+dynamic_params: a dictionary that contains key value pairs {parameter:description} of mutable parameters to the API endpoint that need to be set by REBEL to answer a query
+method: GET/POST, whichever is the type of the API endpoint
+url: URL of the API endpoint that the given tool specifies
+static_params: any params that are constant between all API calls. An API key/token is an example of this. 
+
+As many tools as desired can be added to the tool list, and REBEL will attempt to compositionally answer a question that may require calling multiple tools. 
 <Snippet file="github.mdx" />
