@@ -56,7 +56,7 @@
   ],
   "navigation": [
     {
-	"group": "👋 Welcome",
+	"group": "👋 Welcome 👋",
 	"pages": [
 	    "welcome/why_anarchy",
 	    "welcome/llm_vm",
