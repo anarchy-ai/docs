@@ -13,7 +13,7 @@
   "colors": {
     "primary": "#92d143",
     "light": "#5ce0e6",
-    "dark": "#0f1117",
+    "dark": "#004E7A",
     "background": {"dark":"#0f1117", "light" : "#fefdff"}
   },
   "feedback": {
@@ -33,6 +33,11 @@
   "primaryTab": {
     "name": "Home"
   },
+  "topAnchor": {
+    "name": "Documentation",
+    "icon": "graduation-cap",
+    "url": "welcome"
+  },
   "anchors": [    
 
     {	  
@@ -42,7 +47,7 @@
       "url": "https://discord.gg/wWuNGZAXZF"
     },
     {	  
-      "name": "Our Calendly (talk to us!)",
+      "name": "Book Us! (Sales & Support)",
       "icon": "calendar-days",
       "color": "#006bff",
       "url": "https://calendly.com/anarchy-ai/customer-call"
@@ -51,7 +56,8 @@
       "name": "Y Combinator",
       "icon": "y-combinator",
       "color": "#fb6518",
-      "url": "https://www.ycombinator.com/companies/anarchy"
+      "url": "https://www.ycombinator.com/companies/anarchy",
+      "iconType":"brands"
     }
   ],
   "navigation": [
