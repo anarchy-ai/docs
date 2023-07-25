@@ -4,7 +4,8 @@ description: 'Here we describe how to finetune LLMs and load previously trained 
 ---
 
 ## Finetuning Models
-The LLM-VM uses a data synthesis feature to engage a teacher/student model for finetuning. Basically
+The LLM-VM uses a data synthesis feature to engage a teacher/student model for finetuning super specific small models from larger more general ones through a simple process.
+
 1. A scalable call is made to OpenAI (or other large parameter LLM)
    - 'give me fifty examples like the following query....'
 2. The response is parsed into a training set for finetuning

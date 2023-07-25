@@ -14,7 +14,7 @@
     "primary": "#92d143",
     "light": "#5ce0e6",
     "dark": "#004E7A",
-    "background": {"dark":"#0f1117", "light" : "#fefdff"}
+    "background": {"dark":"#100127", "light" : "#fefdff"}
   },
   "feedback": {
     "suggestEdit": true,
@@ -36,7 +36,7 @@
   "topAnchor": {
     "name": "Documentation",
     "icon": "graduation-cap"
-  },
+  },  
   "anchors": [    
 
     {	  
@@ -61,33 +61,39 @@
   ],
   "navigation": [
     {
-	"group": "Welcome",
+	"group": "👋 Welcome",
 	"pages": [
 	    "welcome/why_anarchy",
+	    "welcome/who_are_we",
 	    "welcome/mission",
-	    "welcome/llm_vm",
-	    "welcome/roadmap",
 	    "welcome/contact"
 	]
     },
     {
-	"group": "Quickstart",
-	"pages": [
-	    "get_started/system",
-	    "get_started/install",
+	"group": "LLM VM",
+	"pages":[
+	    "welcome/llm_vm",
 	    {
-		"group":"👟 Running LLM-VM",
-		"pages":[
-		    "get_started/quickstart/completions",
-		    "get_started/quickstart/finetuning",
-		    "get_started/quickstart/agents",
-		    "get_started/quickstart/local_llms",
-		    "get_started/quickstart/server"
+		"group": "🏄 Quickstart",
+		"pages": [
+		    "get_started/system",
+		    "get_started/install",
+		    {
+			"group":"🏃 Running LLM-VM",
+			"pages":[
+			    "get_started/quickstart/completions",
+			    "get_started/quickstart/finetuning",
+			    "get_started/quickstart/agents",
+			    "get_started/quickstart/local_llms",
+			    "get_started/quickstart/server"
+			]
+		    }
 		]
-	    }
-	    ]
+	    },
+	    "welcome/roadmap"
+	]
     },
-      {
+     {
       "group": "Getting Involved",
       "pages": [
         "contributing/getting_involved",
