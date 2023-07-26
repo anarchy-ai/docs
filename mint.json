@@ -61,16 +61,16 @@
   ],
   "navigation": [
     {
-	"group": "👋 Welcome",
+	"group": "Welcome",
 	"pages": [
 	    "welcome/why_anarchy",
-	    "welcome/who_are_we",
 	    "welcome/mission",
+	    "welcome/who_are_we",
 	    "welcome/contact"
 	]
     },
     {
-	"group": "LLM VM",
+	"group": "LLM-VM",
 	"pages":[
 	    "welcome/llm_vm",
 	    {
