@@ -62,8 +62,7 @@
       "name": "Swag Shop",
       "icon": "shirt",
       "color": "#1100bb",
-      "url": "https://swag.anarchy.ai",
-      "iconType":"brands"
+      "url": "https://swag.anarchy.ai"
     }
   ],
   "navigation": [
