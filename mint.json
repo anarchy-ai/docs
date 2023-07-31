@@ -50,14 +50,7 @@
       "icon": "calendar-days",
       "color": "#006bff",
       "url": "https://calendly.com/anarchy-ai/customer-call"
-    },    
-    {	  
-      "name": "Y Combinator",
-      "icon": "y-combinator",
-      "color": "#fb6518",
-      "url": "https://www.ycombinator.com/companies/anarchy",
-      "iconType":"brands"
-    },    
+    },
     {	  
       "name": "Swag Shop",
       "icon": "shirt",
