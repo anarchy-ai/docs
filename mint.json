@@ -51,24 +51,24 @@
   "navigation": [
     {
 	"group": "Welcome",
-	"pages": [ "welcome/why_anarchy","welcome/llm_vm","welcome/roadmap"]
+	"pages": [ "welcome/llm_vm","welcome/why_anarchy","welcome/roadmap"]
     },
     {
 	"group": "Get Started",
 	"pages": [
 	    "get_started/system",
 	    "get_started/install",
-	    {
-		"group":"Quickstart",
-		"pages":[
-		    "get_started/quickstart/completions",
-		    "get_started/quickstart/finetuning",
-		    "get_started/quickstart/agents",
-		    "get_started/quickstart/local_llms",
-		    "get_started/quickstart/server"
-		]
-	    }
-	    ]
+	    "get_started/quickstart/completions"
+	]
+    },
+    {
+	"group":"Advanced Usage",
+	"pages":[
+	    "get_started/quickstart/finetuning",
+	    "get_started/quickstart/agents",
+	    "get_started/quickstart/local_llms",
+	    "get_started/quickstart/server"
+	]
     },
     {
       "group": "Getting Involved",
