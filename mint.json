@@ -62,8 +62,8 @@
     {
 	"group": "Welcome",
 	"pages": [
-	    "welcome/llm_vm",
 	    "welcome/why_anarchy",
+	    "welcome/llm_vm",
 	    "welcome/mission",
 	    "welcome/who_are_we",
 	    "welcome/contact"
