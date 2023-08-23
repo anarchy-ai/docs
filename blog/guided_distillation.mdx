@@ -1,1 +1,45 @@
+---
+title: 🎻 Guided Distillation
+description: 'Finetune a Pythia 70M model to only output within a '
+---
 
+The paper Efficient Guided Generation for Large Language Models provides a state machine based approach to constrain the output of a Large Language Model. To use the code from this paper, we used the Outlines python library. Using this library we were able to add three types of guiding to LLM generation on our LLM-VM repositiory. 
+
+- **Regex** - The output of the underlying LLM will follow the inputted regex.
+- **Type** - The output of the underlying LLM will be of the inputted type.
+- **Choices** - The output of the underlying LLM will be one of the choices provided in the Choices list. 
+
+```python Guided Generation with Regex, Type, and Choices in quickstart_guided.py
+# import our client
+from llm_vm.client import Client
+import os
+
+# Instantiate the client specifying which LLM you want to use. Gudied generation always uses an open source version of GPT2.
+client = Client()
+
+# Regex-based guided generation
+response = client.complete(prompt = 'Is 1+1=10000?',
+                           context='', regex=r"\s*([Yy]es|[Nn]o|[Nn]ever|[Aa]lways)")
+print(response)
+
+#Choices-based guided generation
+response = client.complete(prompt = 'Did MJ win 6 titles with the Bulls',
+                            context='',choices=["Hell Yeah Dude what a player","No way, Lebron's the Goat"])
+print(response)
+
+#Type-based guided generation
+response = client.complete(prompt = 'How many presidents has the USA had?',
+                           context='',type="integer")
+print(response)
+```
+
+In this blog we discuss how we distilled the GPT2 model down to a 70M parameter Pythia model and were able to limit the constrain the output space of the Pythia model.
+
+
+
+
+<Warning>Saving finetuned LLMs can result in a large amount of storage space. Make sure to keep an eye on how much you're saving</Warning>
+
+## References
+https://arxiv.org/pdf/2307.09702v4.pdf 
+<Snippet file="github.mdx" />
