@@ -1,15 +1,15 @@
 ---
-title: 🎻 Finetuning
-description: 'Here we describe how to finetune LLMs and load previously trained models'
+title: 🎻 Fine-tuning
+description: 'Here we describe how to fine-tune LLMs and load previously trained models'
 ---
 
-## Finetuning Models
-The LLM-VM uses a data synthesis feature to engage a teacher/student model for finetuning super specific small models from larger more general ones through a simple process.
+## Fine-tuning Models
+The LLM-VM uses a data synthesis feature to engage a teacher/student model for fine-tuning super-specific small models from larger more general ones through a simple process.
 
 1. A scalable call is made to OpenAI (or other large parameter LLM)
    - 'give me fifty examples like the following query....'
-2. The response is parsed into a training set for finetuning
-3. The ```small_model``` is trained on the synthezied data set and saved
+2. The response is parsed into a training set for fine-tuning
+3. The ```small_model``` is trained on the synthesized data set and saved
 
 ```python Finetuning a Model
 # import our client
@@ -28,11 +28,11 @@ response=client.complete(prompt="Answer question Q. ",
 			 finetune=True,)
 ```
 
-### Loading a finetuned LLM from disk
-Loading a finetuned model into the LLM-VM for completions is very straightforward.
+### Loading a fine-tuned LLM from disk
+Loading a fine-tuned model into the LLM-VM for completions is very straightforward.
 
-1. Specify the family of finetuned models in "big_model"
-2. Specify the specific filename of the finetuned model you wish to load
+1. Specify the family of fine-tuned models in "big_model"
+2. Specify the specific filename of the fine-tuned model you wish to load
 3. Run the ```load_finetune(model_filename)``` class function to load the model
 4. Generate completions in the usual way
 ```python Loading a Finetuned Model
@@ -43,7 +43,7 @@ import os
 # Instantiate the client specifying which LLM you want to use
 client=Client(big_model='pythia')
 
-# specify the file name of the finetuned model to load
+# Specify the file name of the finetuned model to load
 model_name='<filename_of_your_model>.pt'
 client.load_finetune(model_name)
 
