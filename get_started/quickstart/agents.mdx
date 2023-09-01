@@ -6,7 +6,7 @@ description: 'Our AI agents expand what you can do with LLMs!'
 ## The REBEL Agent
 **REcursion Based Extensible LLM**
 
-Our REBEL agent takes a novel approach to answering complex questions. Using recursive reasoning, REBEL expands what LLMs can do with problem decomposition and tool use. In this way, we are able to answer questions requiring data LLMs were not directly trained on.
+Our REBEL agent takes a novel approach to answering complex questions. Using recursive reasoning, REBEL expands on what LLMs can do with problem decomposition and tool use. In this way, we are able to answer questions requiring data that LLMs were not directly trained on.
 
 ### Running REBEL
 **Getting started with REBEL is easy**
@@ -23,7 +23,7 @@ response = client.complete(
 	 prompt = 'Is it warmer in Paris or Timbuktu and what are the temperatures in either city?',
          context='',
          openai_key=os.getenv("OPENAI_API_KEY"), #for REBEL we need an OpenAI key
-         tools=[{'description': 'Find the weather at a location and returns it in celcius.',  #this tool list contains only one dictionary, therefore only one tool
+         tools=[{'description': 'Find the weather at a location and returns it in celsius.',  #this tool list contains only one dictionary, therefore only one tool
                  'dynamic_params': {
 		 		   "latitude": 'latitude of as a float',
 		 		   "longitude": 'the longitude as a float'
@@ -39,7 +39,7 @@ Tools are defined by dictionaries that are added to the list ```tools```. These 
 |Field| Type | Description|
 |-|-|-|
 |```'description'```| string | A description of what the tool does|
-|```'dynamic_params'```| dictionary | A dictionary containing key value pairs (paramter name : description) of the API endpoint's mutable parameters that need to be set by REBEL in order to answer a query|
+|```'dynamic_params'```| dictionary | A dictionary containing key-value pairs (parameter name : description) of the API endpoint's mutable parameters that need to be set by REBEL in order to answer a query|
 |```'method'```| string | ```GET``` or ```POST```, whichever is the type of the API endpoint|
 |```'url'```| string | URL of the API endpoint that the given tool specifies|
 |```'static_params'```| dictionary | Any parameters that are constant between all API calls. An API key/token is an example of this|
