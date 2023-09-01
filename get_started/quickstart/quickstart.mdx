@@ -10,7 +10,7 @@ description: 'Our LLM-VM lets get going at your speed with the completion endpoi
 # import our client
 from llm_vm.client import Client
 
-# Select which LLM you want to use, here we have openAI's 
+# Select which LLM you want to use, here we have OpenAI's 
 client=Client(big_model='chat_gpt')
 
 # Put in your prompt and go!
@@ -20,7 +20,7 @@ response=client.complete(prompt='What is Anarchy?',
 print(response)
 # Anarchy is a political ideology that advocates for the absence of government...
 ```
-Our Client allows you to interact with OpenAI's completion endpoint seemlessly.
+Our Client allows you to interact with OpenAI's completion endpoint seamlessly.
 
 
 ## Locally Run an LLM
@@ -72,9 +72,9 @@ print(response)
 # Anarchy is a political philosophy that advocates no government...
 ```
 
-## Finetuning
-### Finetuning an LLM
-**Finetune intelligently with LLM-VM**
+## Fine-tuning
+### Fine-tuning an LLM
+**Fine-tune intelligently with LLM-VM**
 
 Our strategy pairs a small LLM with a larger LLM in a student/teacher relationship.
 
@@ -97,9 +97,9 @@ response=client.complete(prompt="Answer question Q. ",
 ```
 
 ### Loading a finetuned LLM from disk
-**Quickly test and deploy your finetuned models with LLM-VM**
+**Quickly test and deploy your fine-tuned models with LLM-VM**
 
-Just specify the parent model, your finetuned filename, and you're almost there!
+Just specify the parent model and your finetuned filename, and you're almost there!
 ```python
 # import our client
 from llm_vm.client import Client
