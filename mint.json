@@ -56,12 +56,6 @@
       "icon": "shirt",
       "color": "#1100bb",
       "url": "https://swag.anarchy.ai"
-    },
-    {	  
-      "name": "Blog",
-      "icon": "bullhorn",
-      "color": "#1100bb",
-      "url": "https://anarchy.ai/blog"
     }
   ],
   "navigation": [
