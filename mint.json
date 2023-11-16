@@ -60,8 +60,8 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages":[
+      "group": "Overview",
+      "pages":["overview/introduction",
           {
         "group": "🏄 Quickstart",
         "pages": [
@@ -70,6 +70,26 @@
             "get_started/quickstart/completions"
         ]
           },
+          "welcome/roadmap",
+          {
+        "group":"About Us",
+        "pages":[
+          
+            "welcome/why_anarchy",
+            "welcome/llm_vm",
+            "welcome/mission",
+            "welcome/who_are_we",
+            "welcome/contact"
+              
+        ]
+          }
+          
+      ]
+        }, 
+    {
+      "group": "Features",
+      "pages":[
+
           {
         "group":"🏃 Advanced LLM-VM",
         "pages":[
@@ -78,25 +98,14 @@
             "get_started/quickstart/local_llms",
             "get_started/quickstart/server"
         ]
-          },
-          "welcome/roadmap"
+          }
       ]
         },
-    {
-	"group": "About Us",
-	"pages": [
-	    "welcome/why_anarchy",
-	    "welcome/llm_vm",
-	    "welcome/mission",
-	    "welcome/who_are_we",
-	    "welcome/contact"
-	]
-    },
+
   
      {
       "group": "Getting Involved",
       "pages": [
-        "contributing/getting_involved",
         "contributing/jobs",
         "contributing/community_development",
         "contributing/constitution"
