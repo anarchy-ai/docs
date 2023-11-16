@@ -70,7 +70,7 @@
             "get_started/quickstart/completions"
         ]
           },
-          "welcome/roadmap",
+          "overview/roadmap",
           {
         "group":"About Us",
         "pages":[
