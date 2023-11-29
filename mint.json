@@ -107,18 +107,26 @@
       ]
         },
         {"group": "Features",
-      "pages":   [{
-        "group":"🏃 Advanced LLM-VM",
-        "pages":[
-            "llmvm/features/finetuning",
-            "llmvm/features/agents",
-            "llmvm/features/local_llms",
-            "llmvm/features/server"
-        ]
-      },
-      
+      "pages":   [
+      "llmvm/features/synth",
+      "llmvm/features/rag",
+      "llmvm/features/rebel",
+      "llmvm/features/selfins",
+      "llmvm/features/awq"
 
-]},
+
+    ]},
+
+    {
+      "group":"🏃 Advanced",
+      "pages":[
+          "llmvm/features/finetuning",
+          "llmvm/features/agents",
+          "llmvm/features/local_llms",
+          "llmvm/features/server"
+      ]
+    },
+
 
   
      {
