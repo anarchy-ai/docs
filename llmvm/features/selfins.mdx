@@ -1,13 +1,18 @@
 ---
-title: Self Instruct
-description: 'Our AI agents expand what you can do with LLMs!'
+title: SELF-INSTRUCT
+description: 'Motivation for SELF-INSTRUCT is to reduce the dependence on human annotators.'
 ---
 
-## The REBEL Agent
-**REcursion Based Extensible LLM**
+## The SELF-INSTRUCTor
+**The non-human annotator**
 
-Our REBEL agent takes a novel approach to answering complex questions. Using recursive reasoning, REBEL expands what LLMs can do with problem decomposition and tool use. In this way, we are able to answer questions requiring data LLMs were not directly trained on.
+Large language models can be effective at following instructions if tuned with annotated “instructional” data. However, this needs a large dataset of human-generated instructional commands and their desired instances. Creating a large dataset via humans is expensive. Furthermore, creating such a human-generated dataset can lack diversity and creativity.
 
+SELF-INSTRUCT tackles this bottleneck by reducing the dependence on human annotators. At a high level, there are two components:
+
+1. Starting with a seed set of instructions+instances, the self-instruct process uses LLMs to generate new instructions and instances in a bootstrapped manner.
+
+2. Next, it uses the generated instructions to finetune an instruction-following model from a vanilla pre-trained language model.
 ### Running REBEL
 **Getting started with REBEL is easy**
 ```python quickstart_REBEL.py
