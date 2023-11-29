@@ -1,14 +1,14 @@
 ---
 title: RAG
-description: 'Our AI agents expand what you can do with LLMs!'
+description: 'RAG models combine the powers of pretrained dense retrieval (DPR) and sequence-to-sequence models.'
 ---
 
-## The REBEL Agent
-**REcursion Based Extensible LLM**
+## The RAG Model
+**Retrieval-augmented generation**
 
-Our REBEL agent takes a novel approach to answering complex questions. Using recursive reasoning, REBEL expands what LLMs can do with problem decomposition and tool use. In this way, we are able to answer questions requiring data LLMs were not directly trained on.
+RAG models retrieve documents, pass them to a seq2seq model, then marginalize to generate outputs. The retriever and seq2seq modules are initialized from pretrained models, and fine-tuned jointly, allowing both retrieval and generation to adapt to downstream tasks.
 
-### Running REBEL
+### Running RAG
 **Getting started with REBEL is easy**
 ```python quickstart_REBEL.py
 # import our client
