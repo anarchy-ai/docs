@@ -58,6 +58,18 @@
       "url": "https://swag.anarchy.ai"
     }
   ],
+
+  "tabs": [
+    {"name": "LLM-VM",
+    "url":"llmvm"},
+    {"name": "Chat.Dev",
+    "url":"chatdev"},
+    {"name": "VecQL",
+    "url":"vecql"}
+
+    
+  ],
+
   "navigation": [
     {
       "group": "Overview",
