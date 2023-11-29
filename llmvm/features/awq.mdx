@@ -1,12 +1,18 @@
 ---
 title: AWQ
-description: 'Our AI agents expand what you can do with LLMs!'
+description: 'AWQ takes the concept of weight quantization to the next level by considering the activations of the model during the quantization process.'
 ---
 
-## The REBEL Agent
-**REcursion Based Extensible LLM**
+## The Role of AWQ 
+**Activation-Aware Weight Quantization**
 
-Our REBEL agent takes a novel approach to answering complex questions. Using recursive reasoning, REBEL expands what LLMs can do with problem decomposition and tool use. In this way, we are able to answer questions requiring data LLMs were not directly trained on.
+In traditional weight quantization, the weights are quantized independently of the data they process. In AWQ, the quantization process takes into account the actual data distribution in the activations produced by the model during inference.
+
+Here's how:
+
+1. Collect Activation Statistics: During a calibration phase, a subset of the data is used to collect statistics on the activations produced by the model. This involves running the model on this data and recording the range of values and the distribution of activations.
+2. Searching Weight Quantization Parameters: Weights are quantized by taking the activation statistics into account. Concretely, we perform a space search for quantization paremeters (e.g., scales and zeropoints), to minimize the distortions incurred by quantization on output activations. As a result, the quantized weights can be accurately represented with fewer bits.
+3. Quantizing: With the quantization parameters in place, the model weights are quantized using a reduced number of bits.
 
 ### Running REBEL
 **Getting started with REBEL is easy**
