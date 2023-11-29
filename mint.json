@@ -99,20 +99,26 @@
       ]
         }, 
     {
-      "group": "Features",
+      "group": "Products",
       "pages":[
-
-          {
-        "group":"🏃 Advanced LLM-VM",
-        "pages":[
-            "get_started/quickstart/finetuning",
-            "get_started/quickstart/agents",
-            "get_started/quickstart/local_llms",
-            "get_started/quickstart/server"
-        ]
-          }
+          "products/chat_dev",
+          "products/llm_vm",
+          "products/vecql"
       ]
         },
+        {"group": "Features",
+      "pages":   [{
+        "group":"🏃 Advanced LLM-VM",
+        "pages":[
+            "llmvm/features/finetuning",
+            "llmvm/features/agents",
+            "llmvm/features/local_llms",
+            "llmvm/features/server"
+        ]
+      },
+      
+
+]},
 
   
      {
