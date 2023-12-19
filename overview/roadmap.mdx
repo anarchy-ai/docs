@@ -7,12 +7,32 @@ description: "This project is in BETA and developing rapidly. We're eager to get
 
 **We're actively working on delivering these features**
 
-- **Live Data Augmentation** - You will be able to provide a live updating data-set and the Anarchy LLM-VM will fine-tune your models or work with a vector DB to provide up-to-date information with citations
+- **Live Data Augmentation** -- You will be able to provide a live updating data-set and the Anarchy LLM-VM will fine-tune your models or work with a vector DB to provide up-to-date information with citations
 
-- **Web Playground** - You will be able to run the Anarchy LLM-VM and test it's outputs from the browser.
+- **Web Playground** -- You will be able to run the Anarchy LLM-VM and test it's outputs from the browser.
 
 - **Load-Balancing and Orchestration** -- If you have multiple LLMs or providers you'd like to utilize, you will be able to hand them to the Anarchy LLM-VM to automatically figure out which to work with and when to optimize your uptime or your costs
 
-- **Output Templating** - You can ensure that the LLM only outputs data in specific formats and fills in variables from a template with either regular expressions, LMQL, or OpenAI's template language
+- **Output Templating** -- You can ensure that the LLM only outputs data in specific formats and fills in variables from a template with either regular expressions, LMQL, or OpenAI's template language
 
 - **Persistent Stateful Memory** - The Anarchy LLM-VM can remember a user's conversation history and react accordingly
+
+- **Implicit Agents 🔧🕵️** --  The Anarchy LLM-VM can be set up to use external tools through our agents such as REBEL just by supplying tool descriptions!
+
+- **Inference Optimization 🚄** -- The Anarchy LLM-VM is optimized from the agent level all the way to assembly on known LLM architectures to get the most bang for your buck. With state-of-the-art batching, sparse inference and quantization, distillation, and multi-level colocation, we aim to provide the fastest framework available.
+
+- **Task Auto-Optimization 🚅** -- The Anarchy LLM-VM will analyze your use cases for repetitive tasks where it can activate student-teacher distillation to train a super-efficient small model from a larger more general model without losing accuracy. It can furthermore take advantage of data-synthesis techniques to improve results.
+
+- **Library Callable 📚** -- We provide a library that can be used from any Python codebase directly.
+
+- **HTTP Endpoints 🕸️** -- We provide an HTTP standalone server to handle completion requests.
+
+- **Smart batching 🗞️** -- Handle multiple calls at the same time from different levels of the llm-vm
+
+- **Speculative Preemptive Sampling 🔮** -- Use a small LLM to predict outputs of a larger LLM and don't fall back to the large one unless sampling is getting bad.
+
+- **Token Streaming 🚰** -- Get a hook for a constantly updating supply of tokens!
+
+- **Streamed Backtracking 🔙** -- Didn't like one output? Look at others! Efficiently.
+
+NOTE: Do refer our pinned ticket on [Architecture Overview & Roadmap](https://github.com/anarchy-ai/LLM-VM/issues/277) 
