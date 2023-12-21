@@ -34,7 +34,7 @@
     "name": "Home"
   },
   "topAnchor": {
-    "name": "Documentation",
+    "name": "Anarchy LLM-VM",
     "icon": "graduation-cap"
   },  
   "anchors": [    
@@ -56,52 +56,83 @@
       "icon": "shirt",
       "color": "#1100bb",
       "url": "https://swag.anarchy.ai"
-    },
-    {	  
-      "name": "Blog",
-      "icon": "bullhorn",
-      "color": "#1100bb",
-      "url": "https://anarchy.ai/blog"
     }
   ],
+
+  "tabs": [
+    {"name": "LLM-VM",
+    "url":"llmvm"},
+    {"name": "Chat.Dev",
+    "url":"chatdev"},
+    {"name": "VecQL",
+    "url":"vecql"}
+
+    
+  ],
+
   "navigation": [
     {
-	"group": "Welcome",
-	"pages": [
-	    "welcome/why_anarchy",
-	    "welcome/llm_vm",
-	    "welcome/mission",
-	    "welcome/who_are_we",
-	    "welcome/contact"
-	]
-    },
+      "group": "Overview",
+      "pages":["overview/introduction",
+          {
+        "group": "🏄 Quickstart",
+        "pages": [
+            "get_started/system",
+            "get_started/install",
+            "get_started/quickstart/completions"
+        ]
+          },
+          "overview/roadmap",
+          {
+        "group":"About Us",
+        "pages":[
+          
+            "welcome/why_anarchy",
+            "welcome/llm_vm",
+            "welcome/mission",
+            "welcome/who_are_we",
+            "welcome/contact"
+              
+        ]
+          }
+          
+      ]
+        }, 
     {
-	"group": "LLM-VM",
-	"pages":[
-	    {
-		"group": "🏄 Quickstart",
-		"pages": [
-		    "get_started/system",
-		    "get_started/install",
-		    "get_started/quickstart/completions"
-		]
-	    },
-	    {
-		"group":"🏃 Advanced LLM-VM",
-		"pages":[
-		    "get_started/quickstart/finetuning",
-		    "get_started/quickstart/agents",
-		    "get_started/quickstart/local_llms",
-		    "get_started/quickstart/server"
-		]
-	    },
-	    "welcome/roadmap"
-	]
+      "group": "Products",
+      "pages":[
+          "products/chat_dev",
+          "products/llm_vm",
+          "products/vecql"
+      ]
+        },
+        {"group": "Features",
+      "pages":   [
+      "llmvm/features/client",
+      "llmvm/features/synth",
+      "llmvm/features/rag",
+      "llmvm/features/rebel",
+      "llmvm/features/selfins",
+      "llmvm/features/awq"
+
+
+    ]},
+
+    {
+      "group":"🏃 Advanced",
+      "pages":[
+          "llmvm/features/finetuning",
+          "llmvm/features/agents",
+          "llmvm/features/local_llms",
+          "llmvm/features/server"
+      ]
     },
+
+
+  
      {
       "group": "Getting Involved",
       "pages": [
-        "contributing/getting_involved",
         "contributing/jobs",
         "contributing/community_development",
         "contributing/constitution"
