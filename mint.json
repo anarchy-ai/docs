@@ -108,6 +108,7 @@
         },
         {"group": "Features",
       "pages":   [
+      "llmvm/features/client",
       "llmvm/features/synth",
       "llmvm/features/rag",
       "llmvm/features/rebel",

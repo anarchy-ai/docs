@@ -1,0 +1,128 @@
+The Anarchy Client is a Python library that facilitates easy access to Anarchy, a large language model (LLM) optimized for generating text-based completions. It provides a convenient interface to interact with the LLM, perform fine-tuning, and utilize various tools and agents for text generation. The client includes two main classes: `Simple_Inference_Client` and `Client`.
+
+## Simple Inference Client
+
+The `Simple_Inference_Client` is designed for straightforward text generation without the need for fine-tuning or additional agents. It allows you to generate text completions using the specified Anarchy LLM model.
+
+### Usage
+
+```python
+from anarchy_client import Simple_Inference_Client
+
+# Initialize the Simple Inference Client
+client = Simple_Inference_Client(model="chat_gpt", openai_key="YOUR_OPENAI_API_KEY")
+
+# Generate text completion
+response = client.complete(prompt="Generate text based on this prompt.")
+print(response)
+```
+
+### Methods
+
+`complete(prompt, max_len=256, **kwargs)`
+
+Generate text completion based on the provided prompt.
+
+- `prompt` (str): The input prompt for text generation.
+- `max_len` (int, optional): The maximum length of the generated text. Default is 256.
+- `**kwargs` (dict, optional): Additional keyword arguments for text generation.
+
+## Client
+
+The `Client` class offers more advanced features, including fine-tuning, data synthesis, and integration with agents for specialized text generation tasks.
+
+### Usage
+
+```python
+from anarchy_client import Client
+
+# Initialize the Client with default models
+client = Client()
+
+# Generate text completion
+response = client.complete(prompt="Generate text based on this prompt.")
+print(response)
+```
+
+### Initialization Parameters
+
+- `big_model` (str, optional): Name of the reliable source Anarchy LLM model. Default is `"chat_gpt"`.
+- `small_model` (str, optional): Name of the small model used for fine-tuning. Default is `"pythia"`.
+- `big_model_config` (dict, optional): Configuration options for the reliable source model.
+- `small_model_config` (dict, optional): Configuration options for the small model used in fine-tuning.
+
+### Methods
+
+`complete(prompt, context="", openai_key=None, finetune=False, data_synthesis=False, temperature=0, stoptoken=None, tools=None, openai_kwargs={}, hf_kwargs={})`
+
+Generate text completion using the Anarchy LLM.
+
+- `prompt` (str): The input prompt for text generation.
+- `context` (str, optional): Unchanging context to send to the LLM for generation. Defaults to an empty string and does not perform fine-tuning.
+- `openai_key` (str, optional): API key for OpenAI access.
+- `finetune` (bool, optional): If `True`, fine-tuning is initiated. Default is `False`.
+- `data_synthesis` (bool, optional): Boolean value to determine whether data should be synthesized for fine-tuning. Default is `False`.
+- `temperature` (float, optional): Sampling temperature for text generation, ranging from 0 to 2.
+- `stoptoken` (str or list, optional): Sequence for stopping token generation.
+- `tools` (list, optional): List of API tools for use with the Rebel agent.
+- `openai_kwargs` (dict, optional): Keyword arguments for generation with OpenAI models.
+- `hf_kwargs` (dict, optional): Keyword arguments for generation with Hugging Face models.
+
+`load_finetune(model_filename=None, small_model=False)`
+
+Load a fine-tuned model for either the reliable source (big) model or the small model.
+
+- `model_filename` (str, optional): The filename of the fine-tuned model.
+- `small_model` (bool, optional): If `True`, load the model for the small model. Default is `False`.
+
+`change_model_dtype(big_model_dtype=None, small_model_dtype=None)`
+
+Change the model data type for either the reliable source (big) model or the small model.
+
+- `big_model_dtype` (str, optional): Data type for the reliable source model.
+- `small_model_dtype` (str, optional): Data type for the small model.
+
+`set_pinecone_db(api_key, env_name)`
+
+Set up the connection to a Pinecone vector database for storing and querying embeddings.
+
+- `api_key` (str): API key for accessing the Pinecone database.
+- `env_name` (str): Name of the Pinecone environment.
+
+`store_pdf(pdf_file_path, chunk_size=1024, **kwargs)`
+
+Store text data from a PDF file into the Pinecone vector database after encoding it into embeddings.
+
+- `pdf_file_path` (str): Path to the PDF file.
+- `chunk_size` (int, optional): Chunk size for processing the PDF. Default is 1024.
+- `**kwargs` (dict, optional): Additional keyword arguments for storing data in the database.
+
+`create_pinecone_index(**kwargs)`
+
+Create an index in the Pinecone vector database.
+
+- `**kwargs` (dict, optional): Additional keyword arguments for creating the index.
+
+`RAG_complete(prompt, context="", openai_key=None, finetune=False, data_synthesis=False, temperature=0, stoptoken=None, tools=None, query_kwargs={}, hf_kwargs={}, openai_kwargs={})`
+
+Generate text completion using the RAG (Retrieval-Augmented Generation) approach. This method first retrieves relevant documents from the Pinecone database based on the prompt's embeddings and then generates text completions.
+
+- `prompt` (str): The input prompt for text generation.
+- `context` (str, optional): Unchanging context to send to the LLM for generation. Defaults to an empty string and does not perform fine-tuning.
+- `openai_key` (str, optional): API key for OpenAI access.
+- `finetune` (bool, optional): If `True`, fine-tuning is initiated. Default is `False`.
+- `data_synthesis` (bool, optional): Boolean value to determine whether data should be synthesized for fine-tuning. Default is `False`.
+- `temperature` (float, optional): Sampling temperature for text generation, ranging from 0 to 2.
+- `stoptoken` (str or list, optional): Sequence for stopping token generation.
+- `tools` (list, optional): List of API tools for use with the Rebel agent.
+- `query_kwargs` (dict, optional): Keyword arguments for querying the Pinecone vector database.
+- `hf_kwargs` (dict, optional): Keyword arguments for generation with Hugging Face models.
+- `openai_kwargs` (dict, optional): Keyword arguments for generation with OpenAI models.
+
+## Examples
+
+For detailed examples and usage of the Anarchy Client, refer to the provided code snippets and the Anarchy Client documentation.
+
+## License
+
+This library is provided under the MIT License. See the [LICENSE](LICENSE) file for more details.
