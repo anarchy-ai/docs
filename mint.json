@@ -76,6 +76,13 @@
 	]
     },
     {
+      "group": "Hackathon",
+      "pages": [
+          "hackathon/hackathon"
+      ]
+        },
+    
+    {
 	"group": "LLM-VM",
 	"pages":[
 	    {
