@@ -3,7 +3,7 @@ title: 🎻 Guided Distillation
 description: 'Finetune a Pythia 70M model to only output within a '
 ---
 
-The paper Efficient Guided Generation for Large Language Models provides a state machine based approach to constrain the output of a Large Language Model. To use the code from this paper, we used the Outlines python library. Using this library we were able to add three types of guiding to LLM generation on our LLM-VM repositiory
+The paper Efficient Guided Generation for Large Language Models provides a state machine-based approach to constrain the output of a Large Language Model. To use the code from this paper, we used the Outlines Python library. Using this library we were able to add three types of guiding to LLM generation on our LLM-VM repository.
 
 - **Regex** - The output of the underlying LLM will follow the inputted regex.
 - **Type** - The output of the underlying LLM will be of the inputted type.
@@ -14,7 +14,7 @@ The paper Efficient Guided Generation for Large Language Models provides a state
 from llm_vm.client import Client
 import os
 
-# Instantiate the client specifying which LLM you want to use. Gudied generation always uses an open source version of GPT2.
+# Instantiate the client specifying which LLM you want to use. Guided generation always uses an open source version of GPT2.
 client = Client()
 
 # Regex-based guided generation
@@ -33,12 +33,12 @@ response = client.complete(prompt = 'How many presidents has the USA had?',
 print(response)
 ```
 
-In this blog we discuss how we distilled the GPT2 model down to a 70M parameter Pythia model and were able to limit the constrain the output space of the Pythia model.
+In this blog, we discuss how we distilled the GPT2 model down to a 70M parameter Pythia model and were able to limit constrain of the output space of the Pythia model.
 
 
 
 
-<Warning>Saving finetuned LLMs can result in a large amount of storage space. Make sure to keep an eye on how much you're saving</Warning>
+<Warning>Saving fine-tuned LLMs can result in a large amount of storage space. Make sure to keep an eye on how much you're saving</Warning>
 
 ## References
 https://arxiv.org/pdf/2307.09702v4.pdf 
