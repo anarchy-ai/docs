@@ -37,8 +37,8 @@ print(response)
 # import our client
 from llm_vm.client import Client
 
-# Select the LlaMA model
-client = Client(big_model = 'llama')
+# Select the LlaMA 2 model
+client = Client(big_model = 'llama2')
 
 # Put in your prompt and go!
 response = client.complete(prompt = 'What is Anarchy?', context = '')
