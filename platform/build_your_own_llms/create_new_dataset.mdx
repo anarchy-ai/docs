@@ -1,0 +1,165 @@
+---
+title: Preparing Your Dataset
+description: 'By following these steps, you can ensure your dataset is well-prepared for synthetic or elaborative augmentation, leading to more effective and accurate AI model training.'
+---
+
+## Collecting Your Data
+
+Data is the lifeblood of AI. Your organization likely has invaluable data that can be used to train AI models very specific to your domain:
+
+<CardGroup cols={3}>
+  <Card title="Customer Interactions" icon="comments">
+    Data from interactions with customers through various channels.
+  </Card>
+  <Card title="User Behavior Logs" icon="chart-line">
+    Logs tracking user actions and behavior patterns.
+  </Card>
+  <Card title="CRM Data" icon="address-book">
+    Customer relationship management data and contact details.
+  </Card>
+  <Card title="Transaction Histories" icon="coins">
+    Records of financial transactions and activities.
+  </Card>
+  <Card title="Market Data" icon="chart-bar">
+    Information on market trends and economic indicators.
+  </Card>
+  <Card title="Fraud Detection Logs" icon="shield">
+    Logs and records related to fraud detection activities.
+  </Card>
+  <Card title="Risk Assessment Reports" icon="chart-bar">
+    Evaluations of potential risks and their impacts.
+  </Card>
+  <Card title="Patient Records" icon="file-medical">
+    Comprehensive records of patient health information.
+  </Card>
+  <Card title="Medical Imaging Data" icon="x-ray">
+    Images from medical scans like X-rays and MRIs.
+  </Card>
+  <Card title="Lab Results" icon="vial">
+    Data from laboratory tests and analyses.
+  </Card>
+  <Card title="Clinical Trial Data" icon="notes-medical">
+    Information and results from clinical trials.
+  </Card>
+  <Card title="Insurance Claims" icon="file-invoice-dollar">
+    Records of insurance claims and processing details.
+  </Card>
+</CardGroup>
+
+## Preparing Your Dataset
+
+It's essential to prepare your dataset cleanly and systematically. This ensures the quality and relevance of the data, leading to better model performance.
+
+<Tip>This will be very important for preparing your data for augmentation, which will be outlined in the next section.</Tip>
+
+The dataset needs to reflect the prompt-response nature of LLMs. So your dataset will need to have one ```system prompt```, then a series of ```prompts``` and ```responses``` that the LLM will use to hone itself. 
+
+Structure them like this: 
+
+| System Prompt                          | User Prompt                           | Response                                     |
+| -------------------------------------- | ------------------------------------- | ---------------------------------------------|
+| Hi, how can I help you today?          |                                       | 
+|                                        | What do these lab results suggest?                          | These lab results suggest that the patient is healthy, as no anomalous data has been detected. |
+|                                        | What is the sentiment of the last 5 customers who came into support chat? | The last five customers have a neutral to positive sentiment. |
+| | ... | ... |
+
+### Collect
+
+Ensure you have collected all relevant data from various sources within your organization. This includes databases, CRM systems, transaction logs, and more. 
+
+### Clean
+
+<Steps>
+  <Step title="Remove Duplicates" icon="text-slash">
+    Ensure there are no duplicate entries in your dataset to avoid redundancy and bias.
+  </Step>
+  <Step title="Handle Missing Values" icon="hammer">
+    Identify and appropriately handle missing data points. Options include filling in missing values using statistical methods or removing incomplete records.
+  </Step>
+  <Step title="Correct Errors" icon="magnifying-glass-plus">
+    Look for and correct any inaccuracies or inconsistencies in the data, such as typographical errors or misformatted entries.
+  </Step>
+  <Step title="Normalize Data" icon="list-check">
+    Standardize the format and scale of your data. This might involve converting all dates to a standard format, ensuring numerical values are on a consistent scale, and normalizing text data.
+  </Step>
+</Steps>
+
+### Segment
+
+<Steps>
+  <Step title="Categorize Data" icon="tags">
+    Segment your data into meaningful categories or classes. This helps in training models more effectively by ensuring relevant data is grouped together.
+  </Step>
+  <Step title="Feature Selection" icon="filter">
+    Identify and select the most relevant features for your model. This reduces noise and improves model performance.
+  </Step>
+</Steps>
+
+### Anonymize
+
+<Steps>
+  <Step title="Remove Personal Identifiers" icon="user-slash">
+    Ensure all personal or sensitive information is anonymized or removed to comply with privacy regulations.
+  </Step>
+  <Step title="Tokenization" icon="key">
+    Replace sensitive data with tokens to maintain data integrity while protecting privacy. Store the mapping between tokens and the original sensitive data in a secure, separate location.
+    <Info>
+**PII Redaction Example:**
+| Original Data           | Tokenized Data  |
+|-------------------------|-----------------|
+| John Doe, 123-45-6789   | T123, T456      |
+| Jane Smith, 987-65-4321 | T789, T654      |
+
+In this example, "John Doe" is replaced with "T123" and "123-45-6789" with "T456," ensuring that sensitive information remains secure.
+</Info>
+  </Step>
+
+</Steps>
+
+
+### Format
+
+<Steps>
+  <Step title="Consistent Structure" icon="align-center">
+    Ensure all data follows a consistent structure and format, making it easier to process and analyze.
+  </Step>
+  <Step title="File Formats" icon="file">
+    Convert data into appropriate file formats (e.g., CSV, JSON) suitable for your training framework.
+  </Step>
+</Steps>
+
+<Note>
+For Anarchy's systems to be able to augment your data,  Data should be in csv format with three mandatory fields: ```system prompt```, ```prompt```, and ```completion```. Ensure that these fields are strictly followed in the order specified and without header row.
+
+A properly formatted .csv dataset should look like this, without the header descriptions:
+
+| System Prompt                          | User Prompt                           | Response                                     |
+| -------------------------------------- | ------------------------------------- | ---------------------------------------------|
+| Hi, how can I help you today?          |                                       | 
+|                                        | What do these lab results suggest?                          | These lab results suggest that the patient is healthy, as no anomalous data has been detected. |
+|                                        | What is the sentiment of the last 5 customers who came into support chat? | The last five customers have a neutral to positive sentiment. |
+| | ... | ... |
+</Note>
+
+### Validate
+
+<CardGroup cols={2}>
+  <Card title="Quality Checks" icon="circle-check">
+    Perform thorough quality checks to ensure the data is accurate, consistent, and complete.
+  </Card>
+  <Card title="Cross-Validation" icon="rotate">
+    Use cross-validation techniques to check the reliability and validity of your dataset.
+  </Card>
+</CardGroup>
+
+### Document
+
+<CardGroup cols={2}>
+  <Card title="Metadata" icon="info">
+    Document metadata, including data sources, collection methods, and any preprocessing steps applied.
+  </Card>
+  <Card title="Version Control" icon="clock-rotate-left">
+    Maintain version control to track changes and updates to your dataset over time.
+  </Card>
+</CardGroup>
+

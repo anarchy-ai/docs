@@ -1,0 +1,85 @@
+---
+title: Chat with websites
+description: 'How to use chat.dev to chat with any website.'
+---
+## Usage Overview
+
+<Info>This project is actively in development. If you encounter bugs, please report them on our discord.</Info>
+
+## Firing up the chatbot
+
+Initializing the chatbot is simple: when you're on a website, say ```https://anarchy.ai```, go into your URL bar and type ```chat.dev/``` in front of the base URL.
+
+So your browser's URL bar would look like ```chat.dev/https://anarchy.ai```.
+
+Hit enter, and a chatbot will read the page you selected and train a model on that website's publicly available data.
+
+## Interacting with the Chatbot
+Once you've initialized the chatbot as described, you'll be able to start chatting with it immediately. Here are the steps to interact effectively:
+
+## Basic Commands
+- Ask Questions: Simply type your question related to the website's content. For example, "What is the main product of Anarchy AI?"
+- Retrieve Information: Request specific information such as contact details, product features, or company history.
+
+## Advanced Features
+<CardGroup cols={2}>
+  <Card title="Contextual Understanding">
+    The chatbot retains context, so you can ask follow-up questions without repeating yourself.
+  </Card>
+  <Card title="Multi-Page Navigation">
+    If the information spans multiple pages, the chatbot can follow links and gather comprehensive data.
+  </Card>
+</CardGroup>
+## Example Interactions
+
+**Product Inquiry**
+
+<Card>**User:** What are the key features of the main product?</Card>
+
+<Card>**Bot:** The main product features include AI-driven analytics, real-time data processing, and user-friendly interfaces.</Card>
+
+**Developer Troubleshooting**
+
+For this example, let's pretend the user is on ```chat.dev/https://docs.stripe.com```
+
+<Card> **User:** "What's the best way to handle webhooks with Stripe? </Card>
+
+<Card>
+**Bot:**
+Handling webhooks with Stripe involves the following steps:
+
+1: Set up your endpoint to listen for webhook events.
+
+2: Verify the webhook signature to ensure the request is from Stripe.
+
+3: Handle the event type in your endpoint code.
+
+Example code:
+
+```Javascript: Javascript
+
+const endpointSecret = 'your-webhook-secret';
+const sig = request.headers['stripe-signature'];
+let event;
+try {
+  event = stripe.webhooks.constructEvent(payload, sig, endpointSecret);
+} catch (err) {
+  response.status(400).send(`Webhook Error: ${err.message}`);
+  return;
+}
+// Handle the event
+if (event.type === 'payment_intent.succeeded') {
+  const paymentIntent = event.data.object;
+  // Fulfill the purchase...
+}
+response.status(200).json({ received: true });
+```
+</Card>
+## Troubleshooting
+If you encounter any issues while using the chat.dev, here are some common troubleshooting steps:
+
+- Refresh the Page: Sometimes, a simple refresh can resolve connectivity or loading issues.
+- Check URL Format: Ensure the URL is correctly formatted as ```chat.dev/https://anarchy.ai```.
+- Clear Cache: Clearing your browser cache can help resolve persistent issues.
+- Update Browser: Ensure your browser is up to date to avoid compatibility issues.
+By following these steps and utilizing the chatbot's features, you can efficiently interact with any website and retrieve the information you need.

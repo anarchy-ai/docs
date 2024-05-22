@@ -1,0 +1,42 @@
+---
+title: 'Selecting a Foundational Model'
+description: "Choosing a foundational model can be challenging. Here's how to think about it."
+---
+
+Selecting the right foundational model for your AI product is crucial for optimizing performance, cost, and usability. 
+Here’s a comprehensive guide to help you navigate this decision, considering various benchmarks such as cost, model size, ease of fine-tuning, and specific use cases.
+
+<Warning>Before you select a foundational model, make sure you have collected and preprocessed a specialized dataset relevant to your use case </Warning>
+
+<Accordion title="Currently Supported Models (More coming soon)">
+    <Snippet file="default_models_table.mdx" />
+</Accordion>
+
+## Factors to Consider
+
+### Cost
+
+Cost is a major factor, especially for large-scale deployments. Models like GPT-4-turbo and GPT-3.5-turbo offer cost-effective options without significantly compromising on performance. 
+
+Generally, more advanced models with higher capabilities tend to be more expensive. Ensure that the cost aligns with your budget and expected usage volume.
+
+### Model Size
+
+Model size impacts both the hardware requirements and the inference speed. Larger models like GPT-4 and GPT-4-1106-preview require substantial computational resources but offer higher accuracy and more sophisticated capabilities. 
+Smaller models, such as Llama-2-7B-32K-Instruct, are more lightweight and can be deployed on less powerful hardware.
+
+<Tip>As hardware performance accelerates, model size becomes less of a cost and speed burden.</Tip>
+
+### Ease of Fine-tuning
+Fine-tuning allows you to adapt the model to your specific use case, improving accuracy and relevance. 
+Models with robust fine-tuning capabilities, like Mistral-7B-Instruct, are preferable for applications that require specialized knowledge or behavior.
+
+### Specific Use Cases
+
+Certain models are optimized for specific applications such as chatbots, long-context handling, or diverse task execution.
+ Understanding your primary use case can guide you to the most suitable model.
+
+ <Card title="Evaluating models for a production environment?" icon="flask-vial" href="https://hqmelywdmux.typeform.com/to/Igbg4n9V">
+  We're here to help. Contact us to help walk you through the testing, evaluation, and benchmarking processes 
+  for your use case.
+</Card>

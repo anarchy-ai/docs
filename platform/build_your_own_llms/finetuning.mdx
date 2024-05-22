@@ -1,0 +1,50 @@
+---
+title: Finetuning
+description: 'Here we describe how to finetune LLMs and load previously trained models'
+---
+
+## Finetuning Models
+
+<Warning>Before you continue, make sure you have a dataset prepared and a foundational model selected.</Warning>
+
+Once you have a prepared dataset, you are ready to create a **new finetune job** on the Anarchy platform.
+
+<Steps>
+<Step title="Kickstart the Process">
+From your dataset page, click on the ```+ New Finetune``` button at the top right corner of the screen. This will take you to the finetune job page.
+</Step>
+<Step title="Label Your Job">
+Next, **name your finetune job**. Choose something unique that you can reference later.
+</Step>
+<Step title="Select Your Base Model">
+Use the dropdown to choose your model.
+<Tip>You can use previously finetuned models as a base model for further finetuning.</Tip>
+</Step>
+<Step title="Adjust the Advanced Settings">
+Tweak these settings to hone in your finetuning job even further.
+
+<CardGroup cols={2}>
+  <Card title="Epochs" icon="clock">
+    The number of times the entire dataset is passed through the model during training.
+  </Card>
+  <Card title="Learning Rate" icon="gauge-high">
+    The step size used for updating the model's parameters during training.
+  </Card>
+  <Card title="Batch Size" icon="cubes">
+    The number of training samples used in one iteration to update the model's parameters.
+  </Card>
+  <Card title="Checkpoints" icon="timeline">
+    Saving the model's state at regular intervals during training for later use or recovery.
+  </Card>
+</CardGroup>
+</Step>
+
+</Steps>
+
+## Cost and Credits
+
+Finetuning is a relatively compute-intensive process, and the cost will scale with the **size of your dataset** and the number of **Epochs** you will train.
+
+On the default Pay-as-you-go plan, 1 credit is equivalent to $1.00USD. For more information about pricing and volume discounts, contact us below or visit our [pricing page](/platform/build_your_own_llms/pricing).
+
+<Snippet file="contact.mdx" />

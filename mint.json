@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Anarchy",
+  "name": "Anarchy Labs",
   "modeToggle": {
     "default": "dark",
     "isHidden": false
@@ -22,20 +22,25 @@
   },
   "topbarLinks": [
     {
-	"name": "Try us at Chat.Dev",
-      "url": "https://chat.dev/"
-    }
+	"name": "Contact Sales",
+      "url": "https://hqmelywdmux.typeform.com/to/Igbg4n9V"
+    },
+    {
+      "name": "Pricing",
+          "url": "/platform/build_your_own_llms/pricing"
+        }
   ],
   "topbarCtaButton": {
-    "type": "github",
-    "url": "https://github.com/anarchy-ai/LLM-VM"
+    "type": "link",
+    "url": "https://chat.dev/",
+    "name": "Sign In"
   },
   "primaryTab": {
     "name": "Home"
   },
   "topAnchor": {
     "name": "Documentation",
-    "icon": "graduation-cap"
+    "icon": "folder-tree"
   },  
   "anchors": [    
 
@@ -46,10 +51,16 @@
       "url": "https://discord.anarchy.ai/"
     },
     {	  
-      "name": "Get on our waitlist!",
-      "icon": "calendar-days",
-      "color": "#006bff",
-      "url": "https://forms.gle/KXR85FgHR552XRgAA"
+      "name": "Blog",
+      "icon": "medium",
+      "color": "#92d143",
+      "url": "#"
+    },
+    {	  
+      "name": "X",
+      "icon": "x",
+      "color": "#1da1f2",
+      "url": "https://x.com/anarchy_ai_inc"
     },
     {	  
       "name": "Swag Shop",
@@ -58,60 +69,58 @@
       "url": "https://swag.anarchy.ai"
     },
     {	  
-      "name": "Blog",
-      "icon": "bullhorn",
-      "color": "#1100bb",
-      "url": "https://anarchy.ai/blog"
+      "name": "Contact Sales",
+      "icon": "comment-dots",
+      "color": "#006bff",
+      "url": "https://hqmelywdmux.typeform.com/to/Igbg4n9V"
     }
   ],
   "navigation": [
     {
 	"group": "Welcome",
 	"pages": [
-	    "welcome/why_anarchy",
-	    "welcome/llm_vm",
-	    "welcome/mission",
-	    "welcome/who_are_we",
-	    "welcome/contact"
+	    "welcome/this_is_anarchy"
 	]
     },
     {
-      "group": "Hackathon",
+      "group": "Chat.dev",
       "pages": [
-          "hackathon/hackathon"
+          "chatdev/gettingstarted"
       ]
         },
     
     {
-	"group": "LLM-VM",
+	"group": "Platform",
 	"pages":[
 	    {
-		"group": "🏄 Quickstart",
+		"group": "Quickstart",
 		"pages": [
-		    "get_started/system",
-		    "get_started/install",
-		    "get_started/quickstart/completions"
+		    "platform/chat_with_open_agis",
+		    "platform/productionize_models"
 		]
 	    },
 	    {
-		"group":"🏃 Advanced LLM-VM",
+		"group":"Build your own LLMs",
 		"pages":[
-		    "get_started/quickstart/finetuning",
-		    "get_started/quickstart/agents",
-		    "get_started/quickstart/local_llms",
-		    "get_started/quickstart/server"
+        "platform/build_your_own_llms/create_new_dataset",
+        "platform/build_your_own_llms/augmentation",
+        "platform/build_your_own_llms/select_a_foundational_model",
+		    "platform/build_your_own_llms/finetuning",
+        "platform/build_your_own_llms/Integrate_APIs",
+		    "platform/build_your_own_llms/versioning",
+        "platform/build_your_own_llms/prompt_engineering",
+        "platform/build_your_own_llms/pricing"
 		]
 	    },
-	    "welcome/roadmap"
+	    "platform/roadmap"
 	]
     },
      {
-      "group": "Getting Involved",
+      "group": "Get Involved",
       "pages": [
-        "contributing/getting_involved",
-        "contributing/jobs",
-        "contributing/community_development",
-        "contributing/constitution"
+        "get_involved/become_an_anarchist",
+        "get_involved/open_roles",
+        "get_involved/constitution"
       ]
     }
   ],
