@@ -1,0 +1,169 @@
+---
+title: Productionize Models
+description: "You can open models to any endpoint on the web using the instructions below."
+---
+
+## Installation
+
+Once you have found or constructed a chatbot you wish to deploy to your website or elsewhere, grab your API key and use the appropriate code snippet to deploy this chatbot to the web.
+
+<Info>Chatbots and conversations will be hosted on our systems and made publicly available by default. 
+To host on your own hardware/cloud instance, or to privatize your chatbots and user conversations on our servers, [contact our sales team.](https://hqmelywdmux.typeform.com/to/Igbg4n9V)</Info>
+
+### What you need
+
+You will need the following items:
+
+- Your ```system prompt```
+- Your ```prompt``` (variable for user input)
+- Your ```API key```
+- The ```source ID``` for your model
+
+You can find the API key and source ID on the dashboard of your model. For help with crafting your prompt and system prompt, check out our [prompt engineering guide](/get_started/quickstart/completions).
+
+### Code snippets
+
+Here's how to deploy and integrate LLMs in production environments that use Javascript, Python, Java, PHP, Rust, or Go. 
+
+<CodeGroup>
+
+```Javascript .Javascript
+const axios = require('axios');
+        let data = JSON.stringify({"system_prompt":"YOUR SYSTEM PROMPT","prompt":"YOUR PROMPT","source_id":"YOUR MODEL SOURCE ID","source_type":1});
+    
+        let config = {
+          method: 'post',
+          url: https://api.chat.dev/ep/conversation/api/sendMessage,
+          headers: { 
+            'Authorization': 'Bearer YOUR_API_TOKEN',
+            'Content-Type': 'application/json'},
+          data : data
+          }
+          axios.request(config)
+            .then((response) => {
+            console.log(JSON.stringify(response.data));
+            })
+            .catch((error) => {
+            console.log(error);
+            });
+```
+
+```python .Python
+import requests
+        import json
+
+        url = https://api.chat.dev/ep/conversation/api/sendMessage
+
+        payload = json.dumps({"system_prompt":"YOUR SYSTEM PROMPT","prompt":"YOUR PROMPT","source_id":"YOUR MODEL SOURCE ID","source_type":1})
+        headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer YOUR_API_TOKEN'}
+
+        response = requests.request("POST", url, headers=headers, data=payload)
+```
+
+```Java .Java
+$OkHttpClient client = new OkHttpClient().newBuilder()
+    .build();
+    MediaType mediaType = MediaType.parse("application/json");
+    RequestBody body = RequestBody.create(mediaType, ""{\"system_prompt\":\"YOUR SYSTEM PROMPT\",\"prompt\":\"YOUR PROMPT\",\"source_id\":\"YOUR MODEL SOURCE ID\",\"source_type\":1}"");
+    Request request = new Request.Builder()
+        .url(https://api.chat.dev/ep/conversation/api/sendMessage)
+        .method("POST", body)
+        .addHeader("Content-Type", "application/json")
+        .addHeader("Authorization", "Bearer YOUR_API_TOKEN")
+        .build();
+
+    Response response = client.newCall(request).execute();
+```
+
+
+```PHP .PHP
+$curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => https://api.chat.dev/ep/conversation/api/sendMessage,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS =>'"{\"system_prompt\":\"YOUR SYSTEM PROMPT\",\"prompt\":\"YOUR PROMPT\",\"source_id\":\"YOUR MODEL SOURCE ID\",\"source_type\":1}"',
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json',
+            'Authorization: Bearer YOUR_API_TOKEN')
+        ));
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+```
+
+```Rust .Rust
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let client = reqwest::Client::builder()
+        .build()?;
+
+    let mut headers = reqwest::header::HeaderMap::new();
+    headers.insert("Content-Type", "application/json".parse()?);
+    headers.insert("Authorization", "Bearer YOUR_API_TOKEN".parse()?);
+
+    let data = r#""{\"system_prompt\":\"YOUR SYSTEM PROMPT\",\"prompt\":\"YOUR PROMPT\",\"source_id\":\"YOUR MODEL SOURCE ID\",\"source_type\":1}""#;
+
+    let json: serde_json::Value = serde_json::from_str(&data)?;
+
+    let request = client.request(reqwest::Method::POST, https://api.chat.dev/ep/conversation/api/sendMessage)
+        .headers(headers)
+        .json(&json);
+
+    let response = request.send().await?;
+    let body = response.text().await?;
+```
+
+```Go .Go
+import (
+    "fmt"
+    "strings"
+    "net/http"
+    "io/ioutil"
+)
+
+func main() {
+
+    url := https://api.chat.dev/ep/conversation/api/sendMessage
+    method := "POST"
+
+    payload := strings.NewReader('"{\"system_prompt\":\"YOUR SYSTEM PROMPT\",\"prompt\":\"YOUR PROMPT\",\"source_id\":\"YOUR MODEL SOURCE ID\",\"source_type\":1}"')
+
+    client := &http.Client {
+    }
+    req, err := http.NewRequest(method, url, payload)
+
+    if err != nil {
+    fmt.Println(err)
+    return
+    }
+    req.Header.Add("Content-Type", "application/json")
+    req.Header.Add("Authorization", "Bearer YOUR_API_TOKEN")
+    res, err := client.Do(req)
+    
+    if err != nil {
+    fmt.Println(err)
+    return
+    }
+    defer res.Body.Close()
+
+    body, err := ioutil.ReadAll(res.Body)
+    if err != nil {
+    fmt.Println(err)
+    return
+    }
+}
+```
+
+</CodeGroup>
+
+<Warning>Make sure to replace YOUR_API_KEY with your API bearer token, YOUR PROMPT with your LLM prompt, YOUR MODEL SOURCE ID with your model ID, and YOUR_SYSTEM_PROMPT with the system prompt you wish to use in production.</Warning>
+
+<Snippet file="github.mdx" />

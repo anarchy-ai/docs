@@ -1,0 +1,92 @@
+---
+title: Augmenting Your Dataset
+description: 'How to make your dataset bigger and more useful to train LLMs'
+---
+
+## What is Data Augmentation?
+
+Data augmentation is the process of increasing the diversity and size of a dataset through various techniques such as generating synthetic data or elaborative augmentation, which enhances the performance and robustness of machine learning models.
+
+<Tip>Data augmentation is used to refine and bolster the quality of datasets that can be used to fine-tune LLMs.</Tip>
+
+There are two primary forms of data augmentation: Elaborative, and Synthetic. This page is a guide for each type and how to use it.
+
+## Benefits of Augmentation
+
+<CardGroup cols={3}>
+  <Card title="Enhanced Dataset Size" icon="database">
+    Synthetic augmentation increases the volume of the dataset, which can be particularly useful in scenarios where acquiring real-world data is challenging or expensive.
+  </Card>
+  <Card title="Improved Model Training" icon="chart-line">
+    A larger and more diverse dataset can lead to better model performance, as it provides a broader range of examples for training.
+  </Card>
+  <Card title="Reduced Bias" icon="heart">
+    By generating diverse data points, synthetic augmentation can help in reducing biases present in the original dataset.
+  </Card>
+</CardGroup>
+
+# Synthetic
+
+Synthetic augmentation, also known as **data synthesis**, is a method used to expand an existing dataset by utilizing LLMs. This process involves sampling existing data points and generating new, synthetic data points based on them. The newly created data is referred to as synthesized or synthetic data.
+
+**Process**
+
+<Steps>
+  <Step title="Sampling Existing Data Points">
+    The initial step involves selecting data points from the existing dataset. These samples serve as the foundation for generating new data.
+  </Step>
+  <Step title="Generating Synthetic Data">
+    Using an LLM, new data points are generated. The LLM analyzes the sampled data and creates new data that is consistent with the patterns and structures observed in the original dataset.
+  </Step>
+  <Step title="Integration">
+    The synthesized data is then integrated back into the original dataset, effectively expanding it and enhancing its diversity.
+  </Step>
+</Steps>
+
+**Applications**
+
+<Card title="Healthcare" icon="laptop-medical" color="#aa4a44" href="https://hqmelywdmux.typeform.com/to/Igbg4n9V">
+  For generating patient data to train medical models without compromising patient privacy.
+</Card>
+
+<Card title="Finance" icon="building-columns" color="#3e9c35" href="https://hqmelywdmux.typeform.com/to/Igbg4n9V">
+To simulate transaction data for fraud detection and other financial models.
+</Card>
+
+
+# Elaborative
+
+Elaborative augmentation is a technique used to create a new dataset from uploaded documents. This process involves utilizing a large language model (LLM) to extract data from your documents and generate a series of prompt-completion pairs. These pairs are then stored as data points in a new dataset. Once enough data points have been generated, this new dataset can be used to fine-tune a model.
+
+**Process**
+
+<Steps>
+  <Step title="Document Upload">
+    Begin by uploading the documents from which you want to create the new dataset. These documents will serve as the source material for data extraction.
+  </Step>
+  <Step title="Data Extraction">
+    The LLM analyzes the uploaded documents and extracts relevant data. This data forms the basis for generating prompt-completion pairs.
+  </Step>
+  <Step title="Generating Prompt-Completion Pairs">
+    The LLM creates a set of prompt-completion pairs based on the extracted data. Each pair consists of a prompt (input) and a corresponding completion (output), which are stored as individual data points.
+  </Step>
+  <Step title="Dataset Creation">
+    The generated prompt-completion pairs are aggregated to form a new dataset. This dataset can be expanded as more documents are processed and more pairs are generated.
+  </Step>
+</Steps>
+
+<Tip>Once a sufficient number of data points have been accumulated, the new dataset can be used to fine-tune a model. This fine-tuning process enhances the model's ability to understand and generate text related to the specific domain of the uploaded documents.</Tip>
+
+**Applications**
+
+<Card title="Legal & Regulatory Compliance" icon="gavel" color="#7c5cc4" href="https://hqmelywdmux.typeform.com/to/Igbg4n9V">
+Generating datasets from legal documents to train models for legal text analysis.
+</Card>
+
+<Card title="Customer Support" icon="headset" color="#ffee44" href="https://hqmelywdmux.typeform.com/to/Igbg4n9V">
+Creating datasets from customer service logs to improve chatbots and automated response systems.
+</Card>
+
+<Card title="Academic Research" icon="graduation-cap" color="#77aa66" href="https://hqmelywdmux.typeform.com/to/Igbg4n9V">
+Utilizing research papers and academic articles to develop models for literature review and summarization.
+</Card>
