@@ -14,7 +14,7 @@
     "primary": "#92d143",
     "light": "#5ce0e6",
     "dark": "#004E7A",
-    "background": {"dark":"#100127", "light" : "#fefdff"}
+    "background": {"dark":"#333333", "light" : "#fefdff"}
   },
   "feedback": {
     "suggestEdit": true,
