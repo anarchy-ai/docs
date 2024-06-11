@@ -32,8 +32,8 @@
   ],
   "topbarCtaButton": {
     "type": "link",
-    "url": "https://chat.dev/",
-    "name": "Sign In"
+    "url": "https://chat.dev/dashboard",
+    "name": "Try It"
   },
   "primaryTab": {
     "name": "Home"
@@ -77,9 +77,10 @@
   ],
   "navigation": [
     {
-	"group": "Welcome",
+	"group": "Home",
 	"pages": [
-	    "welcome/this_is_anarchy"
+	    "home/Homepage",
+      "home/this_is_anarchy"
 	]
     },
     {
@@ -90,7 +91,7 @@
         },
     
     {
-	"group": "Platform",
+	"group": "LLMOps Platform",
 	"pages":[
 	    {
 		"group": "Quickstart",
@@ -116,7 +117,7 @@
 	]
     },
      {
-      "group": "Get Involved",
+      "group": "Community",
       "pages": [
         "get_involved/become_an_anarchist",
         "get_involved/open_roles",
