@@ -26,12 +26,11 @@
       "url": "https://hqmelywdmux.typeform.com/to/Igbg4n9V"
     },
     {
-      "name": "Pricing",
-          "url": "/platform/build_your_own_llms/pricing"
-        }
+  "name": "Pricing",
+      "url": "../platform/build_your_own_llms/pricing"
+    }
   ],
   "topbarCtaButton": {
-    "type": "link",
     "url": "https://chat.dev/dashboard",
     "name": "Try It"
   },
